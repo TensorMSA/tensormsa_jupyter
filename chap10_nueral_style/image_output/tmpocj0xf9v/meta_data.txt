@@ -1,0 +1,12 @@
+image_name: tmpocj0xf9v
+content: jhlow_q.png
+styles[0]: 1.0 * starry-night.jpg
+init_type: content
+content_weight: 5.0
+style_weight: 10000.0
+tv_weight: 0.001
+content_layers: ['conv4_2']
+style_layers: ['relu1_1', 'relu2_1', 'relu3_1', 'relu4_1', 'relu5_1']
+optimizer_type: lbfgs
+max_iterations: 150
+max_image_size: 512
