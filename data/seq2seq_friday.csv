@@ -38,6 +38,9 @@ decode,encode
 4,[날짜] [근태코드] [이름] 가 인가
 4,[날짜] [근태코드] [이름] 가 인가
 4,[날짜] [이름]의 [근태코드] 알아
+4,[이름] [근태코드] 
+4,[이름] [근태코드] 알아
+4,[이름] [근태코드] 어디
 5,AI 과제원은 누구지?
 5,인공지능 동아리는 누가있지?
 5,AI 동아리는 누구지?
@@ -53,3 +56,7 @@ decode,encode
 6,[이름]의 [직급]연락 하고 싶어
 6,[이름]의 [직급]검색해줘
 6,[이름]의 [직급]검색
+-1, UNKNOWN UNKNOWN UNKNOWN UNKNOWN
+-1, UNKNOWN UNKNOWN UNKNOWN 
+-1, UNKNOWN UNKNOWN UNKNOWN UNKNOWN UNKNOWN
+-1, UNKNOWN UNKNOWN UNKNOWN UNKNOWN UNKNOWN UNKNOWN
