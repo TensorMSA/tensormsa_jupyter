@@ -31,24 +31,24 @@ def main(_):
 			dev_inputs, dev_inputs_length, dev_outputs, dev_outputs_length, target_weights = (
 			data_utils.get_test_line(dev_set[bucket_id], i))
 
-			_, _, logits, predicted, enc_embedding, dec_embedding = model.step(sess, dev_inputs, dev_inputs_length,
-				                                                        dev_outputs, dev_outputs_length, target_weights,forward_only)
+			predicted  = model.step(sess, dev_inputs, dev_inputs_length,
+									dev_outputs, dev_outputs_length, target_weights,forward_only)
 
 			print("\nPrediction Results in Iteration %d : " % i)
 
 			s = ""
-			for input in dev_inputs:
-				s += (vocab_rev[input[0]]) + " "
+			for input in dev_inputs[0]:
+				s += (vocab_rev[input]) + " "
 			print (s)
 
 			s = ""
-			for output in dev_outputs:
-				s += (vocab_rev[output[0]]) + " "
+			for output in dev_outputs[0]:
+				s += (vocab_rev[output]) + " "
 			print (s)
 
 			s = ""
-			for i in predicted:
-				s += (vocab_rev[i[0]]) + " "
+			for i in predicted[0][0]:
+				s += (vocab_rev[i]) + " "
 			print (s)
 
 

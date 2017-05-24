@@ -28,22 +28,6 @@ class ChatSeq2SeqModel(object):
 
 		self.buckets = config.buckets
 
-		# # If we use sampled softmax, we need an output projection.
-		# output_projection = None
-		# softmax_loss_function = None
-		# # Sampled softmax only makes sense if we sample less than vocabulary size.
-		# if num_samples > 0 and num_samples < self.target_vocab_size:
-		# 	w = tf.get_variable("proj_w", [self.dec_hidden_size, self.target_vocab_size], initializer=tf.contrib.layers.xavier_initializer())
-		# 	w_t = tf.transpose(w)
-		# 	b = tf.get_variable("proj_b", [self.target_vocab_size], initializer=tf.contrib.layers.xavier_initializer())
-		# 	output_projection = (w, b)
-		#
-		# 	def sampled_loss(inputs, labels):
-		# 		labels = tf.reshape(labels, [-1, 1])
-		# 		return tf.nn.sampled_softmax_loss(w_t, b, inputs, labels, num_samples, self.target_vocab_size)
-		#
-		# 	softmax_loss_function = sampled_loss
-
 		# Create the internal multi-layer cell for our RNN.
 		if use_lstm:
 			single_cell1 = LSTMCell(self.enc_hidden_size)
@@ -119,14 +103,6 @@ class ChatSeq2SeqModel(object):
 
 	def _init_simple_encoder(self):
 		with tf.variable_scope("encoder") as scope:
-			# self.enc_Wemb = tf.get_variable('embedding',
-			# 								initializer=tf.random_uniform([enc_vocab_size + 1, self.enc_emb_size]),
-			# 								dtype=tf.float32)
-            #
-			# # [Batch_size x enc_sent_len x embedding_size]
-			# enc_emb_inputs = tf.nn.embedding_lookup(
-			# 	self.enc_Wemb, self.enc_inputs, name='emb_inputs')
-			# self.encoder_inputs_embedded, self.encoder_inputs_length
 			(self.encoder_outputs, self.encoder_state) = tf.nn.dynamic_rnn(cell=self.encoder_cell,
 																		   inputs=self.encoder_inputs_embedded,
 																		   sequence_length=self.encoder_inputs_length,
@@ -237,11 +213,6 @@ class ChatSeq2SeqModel(object):
 
 	def step(self, session, encoder_inputs, encoder_inputs_length, decoder_inputs, decoder_inputs_length, target_weights, forward_only):
 		try :
-			# input_feed = {}
-			# input_feed[self.encoder_inputs] = encoder_inputs
-			# input_feed[self.encoder_inputs_length] = encoder_inputs_length
-			# input_feed[self.decoder_inputs] = decoder_inputs
-			# input_feed[self.decoder_inputs_length] = decoder_inputs_length
 			input_feed = {
 				self.encoder_inputs: encoder_inputs,
 				self.encoder_inputs_length: encoder_inputs_length,
@@ -251,19 +222,13 @@ class ChatSeq2SeqModel(object):
 			}
 
 			if forward_only:
-				output_feed = [self.decoder_logits, self.decoder_prediction, self.encoder_state, self.decoder_state]
-				logits, prediction, encoder_embedding, decoder_embedding = session.run(output_feed, input_feed)
-				return None, None, logits, prediction, encoder_embedding, decoder_embedding
+				output_feed = [self.predictions]
+				prediction = session.run(output_feed, input_feed)
+				return prediction
 			else:
-				session.run([self.dec_embedding_matrix, self.encoder_inputs_embedded, self.encoder_inputs_length], input_feed)
-				session.run([self.encoder_inputs, self.encoder_outputs], input_feed)
-				session.run([self.decoder_inputs_length, self.max_dec_len], input_feed)
-				session.run([self.decoder_inputs], input_feed )
-				session.run([self.max_dec_len], input_feed)
-				session.run([self.targets], input_feed)
-				session.run([self.masks], input_feed)
-				session.run([self.loss], input_feed)
-				#return gradient, loss, None, None, encoder_embedding, decoder_embedding
+				output_feed = [self.updates, self.gradient_norms, self.loss, self.encoder_state, self.decoder_state]
+				updates, gradient, loss, encoder_embedding, decoder_embedding = session.run(output_feed, input_feed)
+				return gradient, loss, None, None, encoder_embedding, decoder_embedding
 		except Exception as e :
 			raise Exception (e)
 

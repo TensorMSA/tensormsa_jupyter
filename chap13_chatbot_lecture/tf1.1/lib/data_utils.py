@@ -130,9 +130,9 @@ def get_test_line(chat_token_ids, idx):
 	encoder_inputs_length = [len(chat_token_ids[idx][0])]
 	decoder_inputs = [list([model_config.GO_ID] + chat_token_ids[idx][1])]
 	decoder_inputs_length = [len(chat_token_ids[idx][1])]
-	encoder_inputs2 = np.asarray(encoder_inputs).transpose()
+	encoder_inputs2 = np.asarray(encoder_inputs)
 	encoder_inputs_length2 = np.asarray(encoder_inputs_length)
-	decoder_inputs2 = np.asarray(decoder_inputs).transpose()
+	decoder_inputs2 = np.asarray(decoder_inputs)
 	decoder_inputs_length2 = np.asarray(decoder_inputs_length)
 	target_weights = [[1] * len(chat_token_ids[idx][1])]
 	return encoder_inputs2, encoder_inputs_length2, decoder_inputs2, decoder_inputs_length2, target_weights
