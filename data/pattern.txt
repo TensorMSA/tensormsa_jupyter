@@ -1,33 +1,37 @@
-name 전화번호 
-rank name 은  
-name rank
-name
-name depart
-depart name 
-name 부서
-name 업무 
-tel
-name 에게 전화 걸어줘
-name 은 time 인가요
-name 에게 전화
-depart name
-name wc
-depart rank
-name wc 인가요?
-name time wc
-name tel
-name wc time
-depart rank
-rotation
-depart time 근무조는 ?
-depart time 현재 시간 근무조
-name 집전화
-name 휴대 전화 
-name 직번은 ?
-name 의 position
-depart time name 는 누구
-depart 에 time 근무하는 name 은
-depart name 의 담당업무 는
-loc 에 근무하는 rank name 알려줘 
-rank 중에 loc 에 근무하는 name 알려줘
-loc rank
+@depart @name @rank 전화번호
+@depart @leader
+@depart @name 연락처
+@name 에게 전화걸어줘
+@name 전화번호 
+@rank @name 은  
+@name @rank
+@name
+@name @depart
+@depart @name 
+@name
+@depart @name 담당 업무는 
+@tel
+@name 에게 전화 걸어줘
+@name 은 @time 인가요
+@name 에게 전화
+@depart @name
+@name @wc
+@depart @rank
+@name @wc
+@name @time @wc
+@name 누구
+@name 의 @leader
+@name 의 @wc
+@name @wc	
+@name @wc @time
+@depart @rank
+@rotation
+@depart @time
+@depart time 현재 시간 @wc
+@depart @time @name 는 누구
+@depart 에 @time 근무하는 @name 은
+@depart @name 의 담당업무 는
+@loc 에 근무하는 @rank @name 알려줘 
+@rank 중에 @loc 에 근무하는 @name 알려줘
+@loc @rank
+
