@@ -1,37 +1,37 @@
-@depart @name @rank 전화번호
-@depart @leader
-@depart @name 연락처
-@name 에게 전화걸어줘
-@name 전화번호 
-@rank @name 은  
-@name @rank
-@name
-@name @depart
-@depart @name 
-@name
-@depart @name 담당 업무는 
-@tel
-@name 에게 전화 걸어줘
-@name 은 @time 인가요
-@name 에게 전화
-@depart @name
-@name @wc
-@depart @rank
-@name @wc
-@name @time @wc
-@name 누구
-@name 의 @leader
-@name 의 @wc
-@name @wc	
-@name @wc @time
-@depart @rank
-@rotation
-@depart @time
-@depart time 현재 시간 @wc
-@depart @time @name 는 누구
-@depart 에 @time 근무하는 @name 은
-@depart @name 의 담당업무 는
-@loc 에 근무하는 @rank @name 알려줘 
-@rank 중에 @loc 에 근무하는 @name 알려줘
-@loc @rank
+tagdepart tagname tagrank 전화번호
+tagdepart tagleader
+tagdepart tagname 연락처
+tagname 에게 전화걸어줘
+tagname 전화번호 
+tagrank tagname 은  
+tagname tagrank
+tagname
+tagname tagdepart
+tagdepart tagname 
+tagname
+tagdepart tagname 담당 업무는 
+tagtel
+tagname 에게 전화 걸어줘
+tagname 은 tagtime 인가요
+tagname 에게 전화
+tagdepart tagname
+tagname tagwc
+tagdepart tagrank
+tagname tagwc
+tagname tagtime tagwc
+tagname 누구
+tagname 의 tagleader
+tagname 의 tagwc
+tagname tagwc
+tagname tagwc tagtime
+tagdepart tagrank
+tagrotation
+tagdepart tagtime
+tagdepart tagtime 현재 시간 tagwc
+tagdepart tagtime tagname 는 누구
+tagdepart 에 tagtime 근무하는 tagname 은
+tagdepart tagname 의 담당업무 는
+tagloc 에 근무하는 tagrank tagname 알려줘 
+tagrank 중에 tagloc 에 근무하는 tagname 알려줘
+tagloc tagrank
 
