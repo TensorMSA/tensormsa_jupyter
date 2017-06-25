@@ -1,4 +1,4 @@
-name,rank,position,depart,loc,time,wc,tel,rotation
+tagname,tagrank,tagposition,tagdepart,tagloc,tagtime,tagwc,tagtel,tagrotation
 최태훈,A1,Chief PCP,(광양)EIC기술부,광양,오늘,휴무,010-2222-1111,1근
 김성윤,E1,IP PJT 리더,(광양)EIC기술부 계측정비섹션,광양,내일,교육,010-1234-1111,2근
 김창곤,E2,Junior PCP,(광양)EIC기술부 압연계장정비섹션,광양,모레,출장,010-3321-1234,3근
