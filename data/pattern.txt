@@ -1,37 +1,23 @@
-tagdepart tagname tagrank 전화번호
-tagdepart tagleader
-tagdepart tagname 연락처
-tagname 에게 전화걸어줘
-tagname 전화번호 
-tagrank tagname 은  
-tagname tagrank
-tagname
-tagname tagdepart
-tagdepart tagname 
-tagname
-tagdepart tagname 담당 업무는 
-tagtel
-tagname 에게 전화 걸어줘
-tagname 은 tagtime 인가요
-tagname 에게 전화
-tagdepart tagname
-tagname tagwc
-tagdepart tagrank
-tagname tagwc
-tagname tagtime tagwc
-tagname 누구
-tagname 의 tagleader
-tagname 의 tagwc
-tagname tagwc
-tagname tagwc tagtime
-tagdepart tagrank
-tagrotation
-tagdepart tagtime
-tagdepart tagtime 현재 시간 tagwc
-tagdepart tagtime tagname 는 누구
-tagdepart 에 tagtime 근무하는 tagname 은
-tagdepart tagname 의 담당업무 는
-tagloc 에 근무하는 tagrank tagname 알려줘 
-tagrank 중에 tagloc 에 근무하는 tagname 알려줘
-tagloc tagrank
-
+tagname 검색
+tagname rank 검색
+loc tagname 검색
+loc 에 근무하는 tagname 직원 검색
+tagorg tagname 검색
+taghead 찾아줘
+tagname 전화걸어줘
+tagname rank 전화걸어줘
+loc tagname 전화걸어줘
+loc 에 근무하는 tagname 직원 전화걸어줘
+tagorg tagname 전화걸어줘
+taghead 전화
+tagname wc 인가요
+tagname 의 wc 인가요
+tagname 은 date wc 하나요
+tagname 은 date wc
+tagname 은 해외출장인가요
+tagname 은 wc 갔나요
+tagorg tagname 은 wc 갔나요
+tagname rank 은 wc 인가요
+tagname 의 rank 찾아줘
+loc 에 근무하는 tagname rank 검색
+tagname 의 rank 찾아줘
