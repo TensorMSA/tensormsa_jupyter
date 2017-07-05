@@ -1,23 +1,41 @@
-tagname 검색
-tagname rank 검색
-loc tagname 검색
-loc 에 근무하는 tagname 직원 검색
-tagorg tagname 검색
-taghead 찾아줘
-tagname 전화걸어줘
-tagname rank 전화걸어줘
-loc tagname 전화걸어줘
-loc 에 근무하는 tagname 직원 전화걸어줘
-tagorg tagname 전화걸어줘
+tagname tagrank
+tagloc tagrank 찾아줘
+tagloc 에 근무하는 tagrank 찾아줘
+tagname 의 tagsuper 찾아줘
+tagname tagrank 의 tagsuper 찾아줘
+tagorg tagname tagrank 의 tagsuper 찾아줘
+tagloc 에 근무하는 tagname tagrank 의 tagsuper 검색
+tagname 의 tagrank 찾아줘
+tagname 은 휴무인가요
+tagname 은 교육인가요
+tagname 은 출장인가요
+tagname 은 tagdate 근무하나요
+tagname 은 tagdate 휴가
+tagname 은 tagdate 근무
+tagname 은 해외 출장인가요
+tagname 은 출장 갔 나요
+tagname 은 교육 갔 나요
+tagorg tagname 은 교육갔나요
+tagloc tagname 은 출장갔나요
+tagname tagrank 은 교육인가요
+taghead 전화걸어줘
 taghead 전화
-tagname wc 인가요
-tagname 의 wc 인가요
-tagname 은 date wc 하나요
-tagname 은 date wc
-tagname 은 해외출장인가요
-tagname 은 wc 갔나요
-tagorg tagname 은 wc 갔나요
-tagname rank 은 wc 인가요
-tagname 의 rank 찾아줘
-loc 에 근무하는 tagname rank 검색
-tagname 의 rank 찾아줘
+taghead 에게 전화걸기
+taghead 연결
+taghead 에게 연락
+tagname 전화 걸어줘
+tagname tagrank 전화걸어줘
+tagloc tagname 전화걸어줘
+tagloc 에 근무하는 tagname 직원 전화걸어줘
+tagcompany tagname 전화 걸어줘
+tagorg tagname 전화 걸어줘
+tagloc tagorg tagname tagrank 전화걸기
+taghead 찾아줘
+tagname 검색
+tagname tagrank 검색
+tagloc tagname 검색
+tagloc 에 근무 하는 tagname 직원 검색
+tagcompany tagname 검색
+tagorg tagname 검색
+tagorg tagname tagrank 검색
+tagloc tagorg tagname tagrank 찾아줘
