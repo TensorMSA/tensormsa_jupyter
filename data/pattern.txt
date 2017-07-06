@@ -1,4 +1,4 @@
-tagname tagrank
+tagloc tagrank
 tagloc tagrank 찾아줘
 tagloc 에 근무하는 tagrank 찾아줘
 tagname 의 tagsuper 찾아줘
