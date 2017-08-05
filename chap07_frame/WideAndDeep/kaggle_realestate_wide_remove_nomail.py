@@ -143,11 +143,14 @@ def build_estimator(model_dir, model_type):
     # continues columns feeding
     wide_columns = [#airconditioningtypeid,
                     #architecturalstyletypeid,
+
                     basementsqft, bathroomcnt, bedroomcnt,
                     buildingclasstypeid, buildingqualitytypeid, calculatedbathnbr, decktypeid, finishedfloor1squarefeet,
                     calculatedfinishedsquarefeet, finishedsquarefeet12, finishedsquarefeet13, finishedsquarefeet15,
                     finishedsquarefeet50, finishedsquarefeet6, fips, fireplacecnt, fullbathcnt, garagecarcnt,
                     garagetotalsqft,
+
+
                     #heatingorsystemtypeid,
                     latitude, longitude, lotsizesquarefeet, poolcnt,
                     poolsizesum, pooltypeid10, pooltypeid2, pooltypeid7,
@@ -160,20 +163,35 @@ def build_estimator(model_dir, model_type):
                     unitcnt, yardbuildingsqft17, yardbuildingsqft26,
                     yearbuilt, numberofstories, structuretaxvaluedollarcnt, taxvaluedollarcnt, assessmentyear,
                     landtaxvaluedollarcnt, taxamount, taxdelinquencyyear, censustractandblock]
+    #remove
+    important_feature = ['taxamount'
+    ,'lotsizesquarefeet'
+    ,'structuretaxvaluedollarcnt'
+    ,'landtaxvaluedollarcnt'
+    ,'taxvaluedollarcnt'
+    ,'latitude'
+    ,'yearbuilt'
+    ,'calculatedfinishedsquarefeet'
+    ,'longitude'
+    ,'finishedsquarefeet12'
+    ,'regionidzip'
+    ,'rawcensustractandblock'
+    ,'censustractandblock'
+    ,'regionidcity'
+    ,'bedroomcnt'
+    ,'regionidneighborhood'
+    ,'buildingqualitytypeid'
+    ,'calculatedbathnbr'
+    ,'bathroomcnt'
+    ,'fullbathcnt']
+
+    wide_inter = list(set(wide_columns) & set(important_feature))
+
+
+
+
     # categorical columns + continuous feeding
     deep_columns = [
-        tf.contrib.layers.embedding_column(hashottuborspa, dimension=8),
-        tf.contrib.layers.embedding_column(fireplaceflag, dimension=8),
-        tf.contrib.layers.embedding_column(taxdelinquencyflag, dimension=8),
-        tf.contrib.layers.embedding_column(heatingorsystemtypeid, dimension=12),
-
-        tf.contrib.layers.embedding_column(propertylandusetypeid, dimension=12),
-        tf.contrib.layers.embedding_column(storytypeid, dimension=12),
-        tf.contrib.layers.embedding_column(airconditioningtypeid, dimension=12),
-        tf.contrib.layers.embedding_column(architecturalstyletypeid, dimension=12),
-        tf.contrib.layers.embedding_column(typeconstructiontypeid, dimension=12),
-        #airconditioningtypeid,
-        #architecturalstyletypeid,
         basementsqft, bathroomcnt, bedroomcnt, buildingclasstypeid,
         buildingqualitytypeid, calculatedbathnbr, decktypeid, finishedfloor1squarefeet, calculatedfinishedsquarefeet,
         finishedsquarefeet12, finishedsquarefeet13, finishedsquarefeet15, finishedsquarefeet50, finishedsquarefeet6,
@@ -191,18 +209,20 @@ def build_estimator(model_dir, model_type):
         taxamount, taxdelinquencyyear, censustractandblock
     ]
 
+    deep_inter = list(set(deep_columns) & set(important_feature))
+
     if model_type == "wide":
         m = tf.contrib.learn.LinearClassifier(model_dir=model_dir,
                                               feature_columns=wide_columns)
     elif model_type == "deep":
         m = tf.contrib.learn.DNNClassifier(model_dir=model_dir,
                                            feature_columns=deep_columns,
-                                           hidden_units=[1024, 512])
+                                           dnn_optimizer=tf.train.AdamOptimizer(learning_rate=0.0000001),
+                                           hidden_units=[512, 256])
     elif model_type == "deenregress":
         m = tf.contrib.learn.DNNRegressor(model_dir=model_dir,
                                            feature_columns=deep_columns,
-                                           optimizer=tf.train.AdamOptimizer(learning_rate=0.00000001),
-                                           hidden_units=[512, 256])
+                                           hidden_units=[1024, 512])
     elif model_type == "wdRegress":
         m = tf.contrib.learn.DNNLinearCombinedRegressor(
             model_dir=model_dir,
@@ -266,6 +286,9 @@ def train_and_eval(model_dir, model_type, train_steps, train_data, test_data):
     y_train = df_train['logerror'].values
     print(x_train.shape, y_train.shape)
 
+
+
+
   # 여기서 xtrain을 직접 바꿔줘도 될듯
     CATEGORICAL_COLUMNS = [_name for _name, _type in x_train.dtypes.iteritems() if _type == 'object']
     CATEGORICAL_COLUMNS.extend(['heatingorsystemtypeid'
@@ -288,10 +311,35 @@ def train_and_eval(model_dir, model_type, train_steps, train_data, test_data):
 
     LABEL_COLUMN = 'logerror'
 
-
+    important_feature = ['taxamount'
+        , 'lotsizesquarefeet'
+        , 'structuretaxvaluedollarcnt'
+        , 'landtaxvaluedollarcnt'
+        , 'taxvaluedollarcnt'
+        , 'latitude'
+        , 'yearbuilt'
+        , 'calculatedfinishedsquarefeet'
+        , 'longitude'
+        , 'finishedsquarefeet12'
+        , 'regionidzip'
+        , 'rawcensustractandblock'
+        , 'censustractandblock'
+        , 'regionidcity'
+        , 'bedroomcnt'
+        , 'regionidneighborhood'
+        , 'buildingqualitytypeid'
+        , 'calculatedbathnbr'
+        , 'bathroomcnt'
+        , 'fullbathcnt']
+    CATEGORICAL_COLUMNS = list( set(CATEGORICAL_COLUMNS) & set(important_feature))
+    CONTINUOUS_COLUMNS = list(set(CONTINUOUS_COLUMNS) & set(important_feature))
 
     for c in CATEGORICAL_COLUMNS:
         x_train[c] = x_train[c].fillna('False').astype(str)
+
+    from sklearn import preprocessing
+    for k in important_feature:
+        x_train[k] = preprocessing.scale(x_train[k].fillna(0.0))
 
 
     split = 80000
@@ -331,7 +379,7 @@ parser.add_argument(
 parser.add_argument(
   "--train_steps",
   type=int,
-  default=10,
+  default=1000,
   help="Number of training steps."
 )
 parser.add_argument(

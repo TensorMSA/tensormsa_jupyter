@@ -4,9 +4,9 @@ import tensorflow as tf
 
 print('Loading data ...')
 
-train = pd.read_csv('../train_2016_v2.csv')
-prop = pd.read_csv('../properties_2016.csv')
-sample = pd.read_csv('../sample_submission.csv')
+#train = pd.read_csv('../train_2016_v2.csv')
+#prop = pd.read_csv('../properties_2016.csv')
+#sample = pd.read_csv('../sample_submission.csv')
 
 #print("rowcount {0}".format(len(train.index)))
 
@@ -18,25 +18,26 @@ sample = pd.read_csv('../sample_submission.csv')
 
 print('Creating training set ...')
 
-df_train = train.merge(prop, how='left', on='parcelid')
+#df_train = train.merge(prop, how='left', on='parcelid')
 
-x_train = df_train.drop(['parcelid', 'logerror', 'transactiondate', 'propertyzoningdesc', 'propertycountylandusecode'], axis=1)
-y_train = df_train['logerror'].values
-print(x_train.shape, y_train.shape)
+#x_train = df_train.drop(['parcelid', 'logerror', 'transactiondate', 'propertyzoningdesc', 'propertycountylandusecode'], axis=1)
+#y_train = df_train['logerror'].values
+#print(x_train.shape, y_train.shape)
 
-train_columns = x_train.columns
+#train_columns = x_train.columns
 
 #print(x_train.dtypes)
 #print(dir(x_train.dtypes))
 
-CATEGORICAL_COLUMNS = [ _name for _name, _type in x_train.dtypes.iteritems() if _type == 'object' ]
+#CATEGORICAL_COLUMNS = [ _name for _name, _type in x_train.dtypes.iteritems() if _type == 'object' ]
 #print(CATEGORICAL_COLUMNS)
 # 여기서 column을 바꾸자
 
-CONTINUOUS_COLUMNS = [ _name for _name, _type in x_train.dtypes.iteritems() if _type != 'object' ]
+#CONTINUOUS_COLUMNS = [ _name for _name, _type in x_train.dtypes.iteritems() if _type != 'object' ]
 #print(CONTINUOUS_COLUMNS)
 
 LABEL_COLUMN = 'logerror'
+#train_columns = list()
 
 
 def build_estimator(model_dir, model_type):
@@ -202,15 +203,15 @@ def build_estimator(model_dir, model_type):
         m = tf.contrib.learn.DNNRegressor(model_dir=model_dir,
                                            feature_columns=deep_columns,
                                            optimizer=tf.train.AdamOptimizer(learning_rate=0.00000001),
-                                           hidden_units=[512, 256])
+                                           hidden_units=[1024, 512])
     elif model_type == "wdRegress":
         m = tf.contrib.learn.DNNLinearCombinedRegressor(
             model_dir=model_dir,
             linear_feature_columns=wide_columns,
-            linear_optimizer=tf.train.AdamOptimizer(learning_rate=0.00000001),
+            linear_optimizer=tf.train.AdamOptimizer(learning_rate=0.00001),
             dnn_feature_columns=deep_columns,
             dnn_hidden_units=[100, 50],
-            dnn_optimizer=tf.train.AdamOptimizer(learning_rate=0.00000001),
+            dnn_optimizer=tf.train.AdamOptimizer(learning_rate=0.00001),
             fix_global_step_increment_bug=True)
     else:
         m = tf.contrib.learn.DNNLinearCombinedClassifier(
@@ -222,7 +223,7 @@ def build_estimator(model_dir, model_type):
     return m
 
 #6.9556e+25
-def input_fn(x_train,y_train ):
+def input_fn(x_train,y_train, CONTINUOUS_COLUMNS,  CATEGORICAL_COLUMNS):
   """Input builder function."""
   # Creates a dictionary mapping from each continuous feature column name (k) to
   # the values of that column stored in a constant Tensor.
@@ -254,10 +255,12 @@ def train_and_eval(model_dir, model_type, train_steps, train_data, test_data):
     sample = pd.read_csv('../sample_submission.csv')
 
     print('Creating training set ...')
+    from sklearn import preprocessing
 
     for c, dtype in zip(prop.columns, prop.dtypes):
-        if dtype == np.float64:
-            prop[c] = prop[c].fillna(0).astype(np.float32)
+        if (dtype == np.float64 and c != 'parcelid'):
+            prop[c] = preprocessing.scale(prop[c].fillna(0.0).astype(np.float32))
+            #prop[c] = preprocessing.scale(prop[c].fillna(0.0))
 
     df_train = train.merge(prop, how='left', on='parcelid')
 
@@ -294,6 +297,11 @@ def train_and_eval(model_dir, model_type, train_steps, train_data, test_data):
         x_train[c] = x_train[c].fillna('False').astype(str)
 
 
+    #for k in CONTINUOUS_COLUMNS:
+    #    x_train[k] = preprocessing.scale(x_train[k].fillna(0.0))
+
+    train_columns = x_train.columns
+
     split = 80000
     x_train, y_train, x_valid, y_valid = x_train[:split], y_train[:split], x_train[split:], y_train[split:]
 
@@ -305,10 +313,89 @@ def train_and_eval(model_dir, model_type, train_steps, train_data, test_data):
 
 
     m = build_estimator(model_dir, model_type)
-    m.fit(input_fn=lambda: input_fn(x_train, y_train), steps=train_steps)
-    results = m.evaluate(input_fn=lambda: input_fn(x_valid, y_valid), steps=1)
+    m.fit(input_fn=lambda: input_fn(x_train, y_train,CONTINUOUS_COLUMNS,CATEGORICAL_COLUMNS), steps=train_steps)
+    results = m.evaluate(input_fn=lambda: input_fn(x_valid, y_valid,CONTINUOUS_COLUMNS,  CATEGORICAL_COLUMNS), steps=1)
     for key in sorted(results):
         print("%s: %s" % (key, results[key]))
+    return train_columns, m, CONTINUOUS_COLUMNS, CATEGORICAL_COLUMNS
+
+def predict(train_columns, m,CONTINUOUS_COLUMNS, CATEGORICAL_COLUMNS):
+    """Train and evaluate the model."""
+    # train_file_name, test_file_name = maybe_download(train_data, test_data)
+    train = pd.read_csv('../train_2016_v2.csv')
+    prop = pd.read_csv('../properties_2016.csv')
+    sample = pd.read_csv('../sample_submission.csv')
+
+    sample = sample.head(n=10)
+
+    from sklearn import preprocessing
+    print('Creating training set ...')
+
+    for c, dtype in zip(prop.columns, prop.dtypes):
+        if dtype == np.float64:
+            prop[c] = preprocessing.scale(prop[c].fillna(0.0).astype(np.float32))
+
+    sample['parcelid'] = sample['ParcelId']
+    df_test = sample.merge(prop, on='parcelid', how='left')
+    #y_real = df_test['logerror'].values
+    x_test = df_test[train_columns]
+
+
+
+    #df_train = train.merge(prop, how='left', on='parcelid')
+
+    x_train = df_test.drop(
+        ['parcelid', 'logerror', 'transactiondate', 'propertyzoningdesc', 'propertycountylandusecode'], axis=1)
+    y_train = df_test['logerror'].values
+    print(x_train.shape, y_train.shape)
+
+    # 여기서 xtrain을 직접 바꿔줘도 될듯
+    CATEGORICAL_COLUMNS = [_name for _name, _type in x_train.dtypes.iteritems() if _type == 'object']
+    CATEGORICAL_COLUMNS.extend(['heatingorsystemtypeid'
+                                   , 'propertylandusetypeid'
+                                   , 'storytypeid'
+                                   , 'airconditioningtypeid'
+                                   , 'architecturalstyletypeid'
+                                   , 'typeconstructiontypeid'])
+    # print(CATEGORICAL_COLUMNS)
+    # 여기서 column을 바꾸자
+
+    CONTINUOUS_COLUMNS = [_name for _name, _type in x_train.dtypes.iteritems() if _type != 'object']
+    CONTINUOUS_COLUMNS.remove('heatingorsystemtypeid')
+    CONTINUOUS_COLUMNS.remove('propertylandusetypeid')
+    CONTINUOUS_COLUMNS.remove('storytypeid')
+    CONTINUOUS_COLUMNS.remove('airconditioningtypeid')
+    CONTINUOUS_COLUMNS.remove('architecturalstyletypeid')
+    CONTINUOUS_COLUMNS.remove('typeconstructiontypeid')
+    # print(CONTINUOUS_COLUMNS)
+
+    LABEL_COLUMN = 'logerror'
+
+
+    for c in CATEGORICAL_COLUMNS:
+        x_train[c] = x_train[c].fillna('False').astype(str)
+
+    from sklearn import preprocessing
+
+
+    train_columns = x_train.columns
+
+
+
+    for c in CATEGORICAL_COLUMNS:
+        x_test[c] = x_test[c].fillna('False').astype(str)
+
+    from sklearn import preprocessing
+    for k in CONTINUOUS_COLUMNS:
+        x_test[k] = preprocessing.scale(x_test[k].fillna(0.0))
+
+    split = 80000
+    x_train, y_train, x_valid, y_valid = x_train[:split], y_train[:split], x_train[split:], y_train[split:]
+
+    #y_predict = m.predict(input_fn=lambda: input_fn(x_test, y_real,CONTINUOUS_COLUMNS,  CATEGORICAL_COLUMNS) )
+    y_predict = m.predict(input_fn=lambda: input_fn(x_valid, y_valid, CONTINUOUS_COLUMNS, CATEGORICAL_COLUMNS))
+
+    print('predcting ...')
 
 
 import argparse
@@ -319,13 +406,13 @@ parser.register("type", "bool", lambda v: v.lower() == "true")
 parser.add_argument(
   "--model_dir",
   type=str,
-  default="",
+  default="/Model/nomal_1_1814",
   help="Base directory for output models."
 )
 parser.add_argument(
   "--model_type",
   type=str,
-  default="deenregress",
+  default="wdRegress",
   help="Valid model types: {'wide', 'deep', 'wdRegress', 'deenregress','wide_n_deep',}."
 )
 parser.add_argument(
@@ -348,7 +435,11 @@ parser.add_argument(
 )
 FLAGS, unparsed = parser.parse_known_args()
 
-train_and_eval(FLAGS.model_dir, FLAGS.model_type, FLAGS.train_steps,
+train_columns, m,CONTINUOUS_COLUMNS, CATEGORICAL_COLUMNS = train_and_eval(FLAGS.model_dir, FLAGS.model_type, FLAGS.train_steps,
                  FLAGS.train_data, FLAGS.test_data)
+predict(train_columns, m,CONTINUOUS_COLUMNS, CATEGORICAL_COLUMNS)
+
+
+print(train_columns)
 
 

@@ -201,8 +201,7 @@ def build_estimator(model_dir, model_type):
     elif model_type == "deenregress":
         m = tf.contrib.learn.DNNRegressor(model_dir=model_dir,
                                            feature_columns=deep_columns,
-                                           optimizer=tf.train.AdamOptimizer(learning_rate=0.00000001),
-                                           hidden_units=[512, 256])
+                                           hidden_units=[1024, 512])
     elif model_type == "wdRegress":
         m = tf.contrib.learn.DNNLinearCombinedRegressor(
             model_dir=model_dir,
@@ -246,7 +245,7 @@ def input_fn(x_train,y_train ):
   return feature_cols, label
 
 
-def train_and_eval(model_dir, model_type, train_steps, train_data, test_data):
+def train_and_eval():
     """Train and evaluate the model."""
     # train_file_name, test_file_name = maybe_download(train_data, test_data)
     train = pd.read_csv('../train_2016_v2.csv')
@@ -261,94 +260,42 @@ def train_and_eval(model_dir, model_type, train_steps, train_data, test_data):
 
     df_train = train.merge(prop, how='left', on='parcelid')
 
+    cat_cols = ["hashottuborspa", "propertycountylandusecode", "propertyzoningdesc", "fireplaceflag",
+                "taxdelinquencyflag"]
     x_train = df_train.drop(
-        ['parcelid', 'logerror', 'transactiondate', 'propertyzoningdesc', 'propertycountylandusecode'], axis=1)
+        ['parcelid', 'logerror', 'transactiondate', 'propertyzoningdesc', 'propertycountylandusecode']+cat_cols, axis=1)
     y_train = df_train['logerror'].values
     print(x_train.shape, y_train.shape)
 
-  # 여기서 xtrain을 직접 바꿔줘도 될듯
-    CATEGORICAL_COLUMNS = [_name for _name, _type in x_train.dtypes.iteritems() if _type == 'object']
-    CATEGORICAL_COLUMNS.extend(['heatingorsystemtypeid'
-                                ,'propertylandusetypeid'
-                                ,'storytypeid'
-                                ,'airconditioningtypeid'
-                                ,'architecturalstyletypeid'
-                                ,'typeconstructiontypeid'])
-    # print(CATEGORICAL_COLUMNS)
-    # 여기서 column을 바꾸자
+    #train_y = train_df['logerror'].values
+    # cat_cols = ["hashottuborspa", "propertycountylandusecode", "propertyzoningdesc", "fireplaceflag", "taxdelinquencyflag"]
+    # train_df = x_train.drop(['parcelid', 'logerror', 'transactiondate', 'transaction_month']+cat_cols, axis=1)
+    feat_names = x_train.columns.values
 
-    CONTINUOUS_COLUMNS = [_name for _name, _type in x_train.dtypes.iteritems() if _type != 'object']
-    CONTINUOUS_COLUMNS.remove('heatingorsystemtypeid')
-    CONTINUOUS_COLUMNS.remove('propertylandusetypeid')
-    CONTINUOUS_COLUMNS.remove('storytypeid')
-    CONTINUOUS_COLUMNS.remove('airconditioningtypeid')
-    CONTINUOUS_COLUMNS.remove('architecturalstyletypeid')
-    CONTINUOUS_COLUMNS.remove('typeconstructiontypeid')
-    # print(CONTINUOUS_COLUMNS)
+    from sklearn import ensemble
+    import matplotlib.pyplot as plt
+    plt.interactive(False)
+    model = ensemble.ExtraTreesRegressor(n_estimators=25, max_depth=30, max_features=0.3, n_jobs=-1, random_state=0)
+    model.fit(x_train, y_train)
 
-    LABEL_COLUMN = 'logerror'
+    ## plot the importances ##
+    importances = model.feature_importances_
+    std = np.std([tree.feature_importances_ for tree in model.estimators_], axis=0)
+    indices = np.argsort(importances)[::-1][:20]
 
-
-
-    for c in CATEGORICAL_COLUMNS:
-        x_train[c] = x_train[c].fillna('False').astype(str)
-
-
-    split = 80000
-    x_train, y_train, x_valid, y_valid = x_train[:split], y_train[:split], x_train[split:], y_train[split:]
-
-
-    model_dir = tempfile.mkdtemp() if not model_dir else model_dir
-    print("model directory = %s" % model_dir)
-
-
-
-
-    m = build_estimator(model_dir, model_type)
-    m.fit(input_fn=lambda: input_fn(x_train, y_train), steps=train_steps)
-    results = m.evaluate(input_fn=lambda: input_fn(x_valid, y_valid), steps=1)
-    for key in sorted(results):
-        print("%s: %s" % (key, results[key]))
+    plt.figure(figsize=(12,12))
+    plt.title("Feature importances")
+    plt.bar(range(len(indices)), importances[indices], color="r", yerr=std[indices], align="center")
+    plt.xticks(range(len(indices)), feat_names[indices], rotation='vertical')
+    plt.xlim([-1, len(indices)])
+    plt.show()
 
 
 import argparse
 import sys
 import tempfile
-parser = argparse.ArgumentParser()
-parser.register("type", "bool", lambda v: v.lower() == "true")
-parser.add_argument(
-  "--model_dir",
-  type=str,
-  default="",
-  help="Base directory for output models."
-)
-parser.add_argument(
-  "--model_type",
-  type=str,
-  default="deenregress",
-  help="Valid model types: {'wide', 'deep', 'wdRegress', 'deenregress','wide_n_deep',}."
-)
-parser.add_argument(
-  "--train_steps",
-  type=int,
-  default=10,
-  help="Number of training steps."
-)
-parser.add_argument(
-  "--train_data",
-  type=str,
-  default="",
-  help="Path to the training data."
-)
-parser.add_argument(
-  "--test_data",
-  type=str,
-  default="",
-  help="Path to the test data."
-)
-FLAGS, unparsed = parser.parse_known_args()
 
-train_and_eval(FLAGS.model_dir, FLAGS.model_type, FLAGS.train_steps,
-                 FLAGS.train_data, FLAGS.test_data)
+
+train_and_eval()
 
 
