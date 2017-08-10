@@ -1,0 +1,2 @@
+model_checkpoint_path: "MemN2N.model-1160"
+all_model_checkpoint_paths: "MemN2N.model-1160"
