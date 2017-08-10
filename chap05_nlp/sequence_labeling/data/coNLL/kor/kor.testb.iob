@@ -1,0 +1,33 @@
+안녕 B-COMMAND
+
+김승우 B-PERSON
+전화번호 B-TARGET
+검색 O
+
+김승우 B-PERSON
+이메일 B-TARGET
+검색 O/
+
+김승우 B-PERSON
+이미지 B-TARGET
+검색 O
+
+김승우 B-PERSON
+직급 B-TARGET
+검색 O
+
+김수상 B-PERSON
+전화번호 B-TARGET
+검색 O
+
+김수상 B-PERSON
+이메일 B-TARGET
+검색 O
+
+김수상 B-PERSON
+이미지 B-TARGET
+검색 O
+
+김수상 B-PERSON
+직급 B-TARGET
+검색 O
