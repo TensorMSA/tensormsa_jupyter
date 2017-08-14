@@ -1,6 +1,6 @@
 import os
 
-directory = '/tmp/air_car'
+directory = './air_car'
 folderlist = os.listdir(directory)
 lable_arr = []
 

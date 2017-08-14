@@ -5,14 +5,14 @@ import h5py
 image_arr = []
 shape_arr = []
 lable_arr = []
-img = Image.open('/tmp/resize.jpeg')
+img = Image.open('resize.jpeg')
 img = np.array(img)
 shape_arr.append(img.shape)
 img = img.flatten()
 image_arr.append(img)
 lable_arr.append('elephant'.encode('utf8'))
 
-output_path = '/tmp/hdf5'
+output_path = 'resize.hdf5'
 h5file = h5py.File(output_path, mode='w')
 dtype = h5py.special_dtype(vlen=np.dtype('uint8'))
 hdf_features = h5file.create_dataset('image_features', (1,), dtype=dtype)
@@ -35,7 +35,7 @@ hdf_features.dims[0].label = 'batch'
 
 for i in range(len(image_arr)):
     hdf_features[i] = image_arr[i]
-    hdf_shapes[i] = shape_arr[i]
+    #hdf_shapes[i] = shape_arr[i]
     hdf_labels[i] = lable_arr[i]
 
 h5file.flush()

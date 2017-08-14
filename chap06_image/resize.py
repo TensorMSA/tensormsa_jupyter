@@ -1,6 +1,6 @@
 from PIL import Image
 
-img = Image.open('/image/resize.jpeg')
+img = Image.open('resize.jpeg')
 longer_side = max(img.size)
 horizontal_padding = (longer_side - img.size[0]) / 2
 vertical_padding = (longer_side - img.size[1]) / 2
@@ -13,4 +13,4 @@ img = img.crop(
     )
 )
 img = img.resize((32, 32), Image.ANTIALIAS)
-img.save('/tmp/resize_out.jpg')
+img.save('resize_out.jpg')
