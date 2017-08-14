@@ -3,11 +3,12 @@ import h5py
 import numpy as np
 from PIL import Image
 
-directory = '/tmp/air_car'
+directory = '/air_car'
 folderlist = os.listdir(directory)
 folderlist.sort()
 filecnt = 0
 image_arr = []
+shape_arr = []
 lable_arr = []
 processcnt = 1
 
@@ -35,11 +36,13 @@ for folder in folderlist:
             img = img.resize((32, 32), Image.ANTIALIAS)
             img.save(directory + '/' + str(filecnt) + '.jpg')
             img = np.array(img)
+            shape_arr.append(img.shape)
             img = img.reshape([-1, 32, 32, 3])
             img = img.flatten()
 
             image_arr.append(img)
             lable_arr.append(folder.encode('utf8'))
+            print(str(len(shape_arr))+' '+str(len(image_arr)))
             filecnt += 1
 
             print("Processcnt=" + str(processcnt) + " File=" + directory + " forder=" + folder + "  name=" + filename)
@@ -50,7 +53,7 @@ for folder in folderlist:
         processcnt += 1
 
     if filecnt > 0:
-        output_path = '/tmp/air_car/hdf5'
+        output_path = '/air_car/hdf5'
         h5file = h5py.File(output_path, mode='w')
         dtype = h5py.special_dtype(vlen=np.dtype('uint8'))
         hdf_features = h5file.create_dataset('image_features', (filecnt,), dtype=dtype)
@@ -73,6 +76,7 @@ for folder in folderlist:
 
         for i in range(len(image_arr)):
             hdf_features[i] = image_arr[i]
+            #hdf_shapes[i] = shape_arr[i]
             hdf_labels[i] = lable_arr[i]
 
         h5file.flush()
