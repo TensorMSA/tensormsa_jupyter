@@ -134,7 +134,7 @@ def build_estimator(model_dir, model_type):
     airconditioningtypeid = tf.contrib.layers.sparse_column_with_hash_bucket(
       "airconditioningtypeid", hash_bucket_size=1000)
     architecturalstyletypeid = tf.contrib.layers.sparse_column_with_hash_bucket(
-      "architecturalstyletypeid", hash_bucket_size=1000)
+      "architecturalstyletypeid", hash_bucket_si/opt/conda/bin/python3.5ze=1000)
     typeconstructiontypeid = tf.contrib.layers.sparse_column_with_hash_bucket(
       "typeconstructiontypeid", hash_bucket_size=1000)
 
