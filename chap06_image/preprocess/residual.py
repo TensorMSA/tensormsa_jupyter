@@ -6,6 +6,8 @@ GPU run command with Theano backend (with TensorFlow, the GPU is automatically u
     THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python cifar10.py
 """
 from __future__ import print_function
+
+import keras
 from keras.datasets import cifar10
 from keras.preprocessing.image import ImageDataGenerator
 from keras.utils import np_utils
@@ -21,7 +23,7 @@ csv_logger = CSVLogger('resnet18_cifar10.csv')
 
 batch_size = 32
 nb_classes = 2
-nb_epoch = 200
+nb_epoch = 10
 data_augmentation = True
 
 # input image dimensions
@@ -107,3 +109,4 @@ else:
                         validation_data=(X_test, Y_test),
                         epochs=nb_epoch, verbose=1, max_q_size=100,
                         callbacks=[lr_reducer, early_stopper, csv_logger])
+keras.models.save_model(model, 'resnet.mdl')
