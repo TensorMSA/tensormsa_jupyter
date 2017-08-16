@@ -83,7 +83,7 @@ def CNN():
         gpu_options=tf.GPUOptions(allow_growth=True)))  # open a session which is a envrionment of computation graph.
     sess.run(tf.global_variables_initializer())  # initialize the variables
 
-    h5file = h5py.File('air_car.hdf5', mode='r')
+    h5file = h5py.File('../hdf5/air_car.hdf5', mode='r')
     X_train = h5file['image_features']
     y_train = h5file['targets']
 
