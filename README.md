@@ -19,3 +19,5 @@
 - [save_n_load]
   - Basic Opearion in Tensorflow
 
+### [chap13 - AI Chatbot]
+[Slide Share 설명자료](https://www.slideshare.net/healess/python-tensorflow-ai-chatbot)
