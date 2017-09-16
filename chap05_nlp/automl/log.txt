@@ -1,0 +1,829 @@
+08/19/2017 06:59:03 AM - INFO - ***Evolving 10 generations with population 20***
+08/19/2017 06:59:03 AM - INFO - ***Doing generation 1 of 10***
+08/19/2017 07:21:55 AM - INFO - ***Evolving 10 generations with population 20***
+08/19/2017 07:21:55 AM - INFO - ***Doing generation 1 of 10***
+08/19/2017 07:21:55 AM - INFO - Generation average: 4910.00%
+08/19/2017 07:21:55 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:21:55 AM - INFO - ***Doing generation 2 of 10***
+08/19/2017 07:25:11 AM - INFO - ***Evolving 10 generations with population 20***
+08/19/2017 07:25:11 AM - INFO - ***Doing generation 1 of 10***
+08/19/2017 07:25:11 AM - INFO - Generation average: 5325.00%
+08/19/2017 07:25:11 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:25:11 AM - INFO - ***Doing generation 2 of 10***
+08/19/2017 07:30:16 AM - INFO - ***Evolving 10 generations with population 20***
+08/19/2017 07:30:16 AM - INFO - ***Doing generation 1 of 10***
+08/19/2017 07:30:16 AM - INFO - Skip Real Train : True
+08/19/2017 07:30:42 AM - INFO - ***Evolving 10 generations with population 20***
+08/19/2017 07:30:42 AM - INFO - ***Doing generation 1 of 10***
+08/19/2017 07:30:42 AM - INFO - Skip Real Train : True
+08/19/2017 07:30:42 AM - INFO - Start Train with given parms : {'activation': 'tanh', 'nb_layers': 3, 'nb_neurons': 128, 'optimizer': 'adadelta'}
+08/19/2017 07:30:42 AM - INFO - Skip Real Train : True
+08/19/2017 07:30:42 AM - INFO - Start Train with given parms : {'activation': 'tanh', 'nb_layers': 1, 'nb_neurons': 64, 'optimizer': 'rmsprop'}
+08/19/2017 07:30:42 AM - INFO - Skip Real Train : True
+08/19/2017 07:30:42 AM - INFO - Start Train with given parms : {'activation': 'tanh', 'nb_layers': 1, 'nb_neurons': 1024, 'optimizer': 'adagrad'}
+08/19/2017 07:30:42 AM - INFO - Skip Real Train : True
+08/19/2017 07:30:42 AM - INFO - Start Train with given parms : {'activation': 'relu', 'nb_layers': 2, 'nb_neurons': 1024, 'optimizer': 'adam'}
+08/19/2017 07:30:42 AM - INFO - Skip Real Train : True
+08/19/2017 07:30:42 AM - INFO - Start Train with given parms : {'activation': 'sigmoid', 'nb_layers': 3, 'nb_neurons': 64, 'optimizer': 'adagrad'}
+08/19/2017 07:30:42 AM - INFO - Skip Real Train : True
+08/19/2017 07:30:42 AM - INFO - Start Train with given parms : {'activation': 'sigmoid', 'nb_layers': 4, 'nb_neurons': 512, 'optimizer': 'adagrad'}
+08/19/2017 07:30:42 AM - INFO - Skip Real Train : True
+08/19/2017 07:30:42 AM - INFO - Start Train with given parms : {'activation': 'tanh', 'nb_layers': 1, 'nb_neurons': 64, 'optimizer': 'adadelta'}
+08/19/2017 07:30:42 AM - INFO - Skip Real Train : True
+08/19/2017 07:30:42 AM - INFO - Start Train with given parms : {'activation': 'elu', 'nb_layers': 2, 'nb_neurons': 64, 'optimizer': 'rmsprop'}
+08/19/2017 07:30:42 AM - INFO - Skip Real Train : True
+08/19/2017 07:30:42 AM - INFO - Start Train with given parms : {'activation': 'tanh', 'nb_layers': 4, 'nb_neurons': 768, 'optimizer': 'adadelta'}
+08/19/2017 07:30:42 AM - INFO - Skip Real Train : True
+08/19/2017 07:30:42 AM - INFO - Start Train with given parms : {'activation': 'tanh', 'nb_layers': 3, 'nb_neurons': 512, 'optimizer': 'adadelta'}
+08/19/2017 07:30:42 AM - INFO - Skip Real Train : True
+08/19/2017 07:30:42 AM - INFO - Start Train with given parms : {'activation': 'tanh', 'nb_layers': 2, 'nb_neurons': 128, 'optimizer': 'adam'}
+08/19/2017 07:30:42 AM - INFO - Skip Real Train : True
+08/19/2017 07:30:42 AM - INFO - Start Train with given parms : {'activation': 'relu', 'nb_layers': 2, 'nb_neurons': 768, 'optimizer': 'adam'}
+08/19/2017 07:30:42 AM - INFO - Skip Real Train : True
+08/19/2017 07:30:42 AM - INFO - Start Train with given parms : {'activation': 'tanh', 'nb_layers': 2, 'nb_neurons': 512, 'optimizer': 'sgd'}
+08/19/2017 07:30:42 AM - INFO - Skip Real Train : True
+08/19/2017 07:30:42 AM - INFO - Start Train with given parms : {'activation': 'relu', 'nb_layers': 3, 'nb_neurons': 256, 'optimizer': 'nadam'}
+08/19/2017 07:30:42 AM - INFO - Skip Real Train : True
+08/19/2017 07:30:42 AM - INFO - Start Train with given parms : {'activation': 'relu', 'nb_layers': 4, 'nb_neurons': 128, 'optimizer': 'sgd'}
+08/19/2017 07:30:42 AM - INFO - Skip Real Train : True
+08/19/2017 07:30:42 AM - INFO - Start Train with given parms : {'activation': 'relu', 'nb_layers': 4, 'nb_neurons': 768, 'optimizer': 'adamax'}
+08/19/2017 07:30:42 AM - INFO - Skip Real Train : True
+08/19/2017 07:30:42 AM - INFO - Start Train with given parms : {'activation': 'elu', 'nb_layers': 3, 'nb_neurons': 256, 'optimizer': 'adam'}
+08/19/2017 07:30:42 AM - INFO - Skip Real Train : True
+08/19/2017 07:30:42 AM - INFO - Start Train with given parms : {'activation': 'elu', 'nb_layers': 4, 'nb_neurons': 768, 'optimizer': 'rmsprop'}
+08/19/2017 07:30:42 AM - INFO - Skip Real Train : True
+08/19/2017 07:30:42 AM - INFO - Start Train with given parms : {'activation': 'elu', 'nb_layers': 2, 'nb_neurons': 256, 'optimizer': 'adam'}
+08/19/2017 07:30:42 AM - INFO - Skip Real Train : True
+08/19/2017 07:30:42 AM - INFO - Start Train with given parms : {'activation': 'elu', 'nb_layers': 3, 'nb_neurons': 768, 'optimizer': 'adamax'}
+08/19/2017 07:30:42 AM - INFO - Generation average: 5045.00%
+08/19/2017 07:30:42 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:30:42 AM - INFO - ***Doing generation 2 of 10***
+08/19/2017 07:30:42 AM - INFO - Skip Real Train : False
+08/19/2017 07:30:42 AM - INFO - Start Train with given parms : {'activation': 'elu', 'nb_layers': 2, 'nb_neurons': 768, 'optimizer': 'adam'}
+08/19/2017 07:32:33 AM - INFO - ***Evolving 10 generations with population 20***
+08/19/2017 07:32:33 AM - INFO - ***Doing generation 1 of 10***
+08/19/2017 07:32:33 AM - INFO - Skip Real Train : True
+08/19/2017 07:32:33 AM - INFO - Start Train with given parms : {'nb_layers': 2, 'nb_neurons': 256, 'activation': 'tanh', 'optimizer': 'nadam'}
+08/19/2017 07:32:33 AM - INFO - Finish Train and It's result : 83
+08/19/2017 07:32:33 AM - INFO - Skip Real Train : True
+08/19/2017 07:32:33 AM - INFO - Start Train with given parms : {'nb_layers': 1, 'nb_neurons': 1024, 'activation': 'relu', 'optimizer': 'adam'}
+08/19/2017 07:32:33 AM - INFO - Finish Train and It's result : 39
+08/19/2017 07:32:33 AM - INFO - Skip Real Train : True
+08/19/2017 07:32:33 AM - INFO - Start Train with given parms : {'nb_layers': 3, 'nb_neurons': 1024, 'activation': 'tanh', 'optimizer': 'rmsprop'}
+08/19/2017 07:32:33 AM - INFO - Finish Train and It's result : 9
+08/19/2017 07:32:33 AM - INFO - Skip Real Train : True
+08/19/2017 07:32:33 AM - INFO - Start Train with given parms : {'nb_layers': 4, 'nb_neurons': 512, 'activation': 'relu', 'optimizer': 'adamax'}
+08/19/2017 07:32:33 AM - INFO - Finish Train and It's result : 60
+08/19/2017 07:32:33 AM - INFO - Skip Real Train : True
+08/19/2017 07:32:33 AM - INFO - Start Train with given parms : {'nb_layers': 4, 'nb_neurons': 64, 'activation': 'tanh', 'optimizer': 'rmsprop'}
+08/19/2017 07:32:33 AM - INFO - Finish Train and It's result : 80
+08/19/2017 07:32:33 AM - INFO - Skip Real Train : True
+08/19/2017 07:32:33 AM - INFO - Start Train with given parms : {'nb_layers': 3, 'nb_neurons': 128, 'activation': 'relu', 'optimizer': 'nadam'}
+08/19/2017 07:32:33 AM - INFO - Finish Train and It's result : 64
+08/19/2017 07:32:33 AM - INFO - Skip Real Train : True
+08/19/2017 07:32:33 AM - INFO - Start Train with given parms : {'nb_layers': 2, 'nb_neurons': 512, 'activation': 'elu', 'optimizer': 'rmsprop'}
+08/19/2017 07:32:33 AM - INFO - Finish Train and It's result : 40
+08/19/2017 07:32:33 AM - INFO - Skip Real Train : True
+08/19/2017 07:32:33 AM - INFO - Start Train with given parms : {'nb_layers': 1, 'nb_neurons': 64, 'activation': 'tanh', 'optimizer': 'adagrad'}
+08/19/2017 07:32:33 AM - INFO - Finish Train and It's result : 49
+08/19/2017 07:32:33 AM - INFO - Skip Real Train : True
+08/19/2017 07:32:33 AM - INFO - Start Train with given parms : {'nb_layers': 4, 'nb_neurons': 256, 'activation': 'elu', 'optimizer': 'nadam'}
+08/19/2017 07:32:33 AM - INFO - Finish Train and It's result : 58
+08/19/2017 07:32:33 AM - INFO - Skip Real Train : True
+08/19/2017 07:32:33 AM - INFO - Start Train with given parms : {'nb_layers': 3, 'nb_neurons': 128, 'activation': 'sigmoid', 'optimizer': 'adam'}
+08/19/2017 07:32:33 AM - INFO - Finish Train and It's result : 12
+08/19/2017 07:32:33 AM - INFO - Skip Real Train : True
+08/19/2017 07:32:33 AM - INFO - Start Train with given parms : {'nb_layers': 4, 'nb_neurons': 128, 'activation': 'tanh', 'optimizer': 'adagrad'}
+08/19/2017 07:32:33 AM - INFO - Finish Train and It's result : 16
+08/19/2017 07:32:33 AM - INFO - Skip Real Train : True
+08/19/2017 07:32:33 AM - INFO - Start Train with given parms : {'nb_layers': 4, 'nb_neurons': 1024, 'activation': 'relu', 'optimizer': 'sgd'}
+08/19/2017 07:32:33 AM - INFO - Finish Train and It's result : 50
+08/19/2017 07:32:33 AM - INFO - Skip Real Train : True
+08/19/2017 07:32:33 AM - INFO - Start Train with given parms : {'nb_layers': 1, 'nb_neurons': 1024, 'activation': 'tanh', 'optimizer': 'rmsprop'}
+08/19/2017 07:32:33 AM - INFO - Finish Train and It's result : 0
+08/19/2017 07:32:33 AM - INFO - Skip Real Train : True
+08/19/2017 07:32:33 AM - INFO - Start Train with given parms : {'nb_layers': 1, 'nb_neurons': 256, 'activation': 'relu', 'optimizer': 'nadam'}
+08/19/2017 07:32:33 AM - INFO - Finish Train and It's result : 54
+08/19/2017 07:32:33 AM - INFO - Skip Real Train : True
+08/19/2017 07:32:33 AM - INFO - Start Train with given parms : {'nb_layers': 1, 'nb_neurons': 1024, 'activation': 'relu', 'optimizer': 'adadelta'}
+08/19/2017 07:32:33 AM - INFO - Finish Train and It's result : 39
+08/19/2017 07:32:33 AM - INFO - Skip Real Train : True
+08/19/2017 07:32:33 AM - INFO - Start Train with given parms : {'nb_layers': 1, 'nb_neurons': 512, 'activation': 'sigmoid', 'optimizer': 'sgd'}
+08/19/2017 07:32:33 AM - INFO - Finish Train and It's result : 97
+08/19/2017 07:32:33 AM - INFO - Skip Real Train : True
+08/19/2017 07:32:33 AM - INFO - Start Train with given parms : {'nb_layers': 2, 'nb_neurons': 128, 'activation': 'tanh', 'optimizer': 'rmsprop'}
+08/19/2017 07:32:33 AM - INFO - Finish Train and It's result : 49
+08/19/2017 07:32:33 AM - INFO - Skip Real Train : True
+08/19/2017 07:32:33 AM - INFO - Start Train with given parms : {'nb_layers': 1, 'nb_neurons': 256, 'activation': 'relu', 'optimizer': 'adamax'}
+08/19/2017 07:32:33 AM - INFO - Finish Train and It's result : 23
+08/19/2017 07:32:33 AM - INFO - Skip Real Train : True
+08/19/2017 07:32:33 AM - INFO - Start Train with given parms : {'nb_layers': 3, 'nb_neurons': 256, 'activation': 'tanh', 'optimizer': 'adam'}
+08/19/2017 07:32:33 AM - INFO - Finish Train and It's result : 41
+08/19/2017 07:32:33 AM - INFO - Skip Real Train : True
+08/19/2017 07:32:33 AM - INFO - Start Train with given parms : {'nb_layers': 3, 'nb_neurons': 256, 'activation': 'relu', 'optimizer': 'rmsprop'}
+08/19/2017 07:32:33 AM - INFO - Finish Train and It's result : 58
+08/19/2017 07:32:33 AM - INFO - Generation average: 4605.00%
+08/19/2017 07:32:33 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:32:33 AM - INFO - ***Doing generation 2 of 10***
+08/19/2017 07:32:33 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - ***Evolving 10 generations with population 20***
+08/19/2017 07:33:00 AM - INFO - ***Doing generation 1 of 10***
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:00 AM - INFO - Start Train with given parms : {'nb_layers': 3, 'nb_neurons': 128, 'optimizer': 'sgd', 'activation': 'tanh'}
+08/19/2017 07:33:00 AM - INFO - Finish Train and It's result : 50
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:00 AM - INFO - Start Train with given parms : {'nb_layers': 3, 'nb_neurons': 256, 'optimizer': 'nadam', 'activation': 'relu'}
+08/19/2017 07:33:00 AM - INFO - Finish Train and It's result : 70
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:00 AM - INFO - Start Train with given parms : {'nb_layers': 1, 'nb_neurons': 768, 'optimizer': 'adagrad', 'activation': 'tanh'}
+08/19/2017 07:33:00 AM - INFO - Finish Train and It's result : 25
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:00 AM - INFO - Start Train with given parms : {'nb_layers': 1, 'nb_neurons': 128, 'optimizer': 'rmsprop', 'activation': 'elu'}
+08/19/2017 07:33:00 AM - INFO - Finish Train and It's result : 60
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:00 AM - INFO - Start Train with given parms : {'nb_layers': 3, 'nb_neurons': 64, 'optimizer': 'adagrad', 'activation': 'elu'}
+08/19/2017 07:33:00 AM - INFO - Finish Train and It's result : 50
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:00 AM - INFO - Start Train with given parms : {'nb_layers': 3, 'nb_neurons': 256, 'optimizer': 'rmsprop', 'activation': 'elu'}
+08/19/2017 07:33:00 AM - INFO - Finish Train and It's result : 76
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:00 AM - INFO - Start Train with given parms : {'nb_layers': 4, 'nb_neurons': 64, 'optimizer': 'adamax', 'activation': 'relu'}
+08/19/2017 07:33:00 AM - INFO - Finish Train and It's result : 50
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:00 AM - INFO - Start Train with given parms : {'nb_layers': 2, 'nb_neurons': 128, 'optimizer': 'nadam', 'activation': 'tanh'}
+08/19/2017 07:33:00 AM - INFO - Finish Train and It's result : 36
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:00 AM - INFO - Start Train with given parms : {'nb_layers': 2, 'nb_neurons': 128, 'optimizer': 'rmsprop', 'activation': 'elu'}
+08/19/2017 07:33:00 AM - INFO - Finish Train and It's result : 23
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:00 AM - INFO - Start Train with given parms : {'nb_layers': 3, 'nb_neurons': 256, 'optimizer': 'sgd', 'activation': 'relu'}
+08/19/2017 07:33:00 AM - INFO - Finish Train and It's result : 28
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:00 AM - INFO - Start Train with given parms : {'nb_layers': 2, 'nb_neurons': 512, 'optimizer': 'adam', 'activation': 'relu'}
+08/19/2017 07:33:00 AM - INFO - Finish Train and It's result : 82
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:00 AM - INFO - Start Train with given parms : {'nb_layers': 2, 'nb_neurons': 256, 'optimizer': 'adadelta', 'activation': 'elu'}
+08/19/2017 07:33:00 AM - INFO - Finish Train and It's result : 48
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:00 AM - INFO - Start Train with given parms : {'nb_layers': 1, 'nb_neurons': 256, 'optimizer': 'adam', 'activation': 'elu'}
+08/19/2017 07:33:00 AM - INFO - Finish Train and It's result : 61
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:00 AM - INFO - Start Train with given parms : {'nb_layers': 2, 'nb_neurons': 128, 'optimizer': 'adam', 'activation': 'elu'}
+08/19/2017 07:33:00 AM - INFO - Finish Train and It's result : 90
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:00 AM - INFO - Start Train with given parms : {'nb_layers': 2, 'nb_neurons': 512, 'optimizer': 'nadam', 'activation': 'tanh'}
+08/19/2017 07:33:00 AM - INFO - Finish Train and It's result : 68
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:00 AM - INFO - Start Train with given parms : {'nb_layers': 4, 'nb_neurons': 768, 'optimizer': 'sgd', 'activation': 'sigmoid'}
+08/19/2017 07:33:00 AM - INFO - Finish Train and It's result : 58
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:00 AM - INFO - Start Train with given parms : {'nb_layers': 1, 'nb_neurons': 64, 'optimizer': 'rmsprop', 'activation': 'relu'}
+08/19/2017 07:33:00 AM - INFO - Finish Train and It's result : 86
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:00 AM - INFO - Start Train with given parms : {'nb_layers': 2, 'nb_neurons': 64, 'optimizer': 'adagrad', 'activation': 'elu'}
+08/19/2017 07:33:00 AM - INFO - Finish Train and It's result : 39
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:00 AM - INFO - Start Train with given parms : {'nb_layers': 2, 'nb_neurons': 128, 'optimizer': 'adam', 'activation': 'tanh'}
+08/19/2017 07:33:00 AM - INFO - Finish Train and It's result : 17
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:00 AM - INFO - Start Train with given parms : {'nb_layers': 3, 'nb_neurons': 768, 'optimizer': 'adadelta', 'activation': 'elu'}
+08/19/2017 07:33:00 AM - INFO - Finish Train and It's result : 55
+08/19/2017 07:33:00 AM - INFO - Generation average: 5360.00%
+08/19/2017 07:33:00 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:33:00 AM - INFO - ***Doing generation 2 of 10***
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Generation average: 6400.00%
+08/19/2017 07:33:00 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:33:00 AM - INFO - ***Doing generation 3 of 10***
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Generation average: 6675.00%
+08/19/2017 07:33:00 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:33:00 AM - INFO - ***Doing generation 4 of 10***
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Generation average: 7040.00%
+08/19/2017 07:33:00 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:33:00 AM - INFO - ***Doing generation 5 of 10***
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Generation average: 6940.00%
+08/19/2017 07:33:00 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:33:00 AM - INFO - ***Doing generation 6 of 10***
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Generation average: 7145.00%
+08/19/2017 07:33:00 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:33:00 AM - INFO - ***Doing generation 7 of 10***
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Generation average: 6960.00%
+08/19/2017 07:33:00 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:33:00 AM - INFO - ***Doing generation 8 of 10***
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Generation average: 6720.00%
+08/19/2017 07:33:00 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:33:00 AM - INFO - ***Doing generation 9 of 10***
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Generation average: 7235.00%
+08/19/2017 07:33:00 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:33:00 AM - INFO - ***Doing generation 10 of 10***
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:00 AM - INFO - Generation average: 6415.00%
+08/19/2017 07:33:00 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:33:00 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:33:00 AM - INFO - {'nb_layers': 2, 'nb_neurons': 256, 'optimizer': 'adam', 'activation': 'relu'}
+08/19/2017 07:33:00 AM - INFO - Network accuracy: 9900.00%
+08/19/2017 07:33:00 AM - INFO - {'nb_layers': 2, 'nb_neurons': 256, 'optimizer': 'rmsprop', 'activation': 'elu'}
+08/19/2017 07:33:00 AM - INFO - Network accuracy: 9900.00%
+08/19/2017 07:33:00 AM - INFO - {'nb_layers': 1, 'nb_neurons': 64, 'optimizer': 'rmsprop', 'activation': 'sigmoid'}
+08/19/2017 07:33:00 AM - INFO - Network accuracy: 9800.00%
+08/19/2017 07:33:00 AM - INFO - {'nb_layers': 2, 'nb_neurons': 256, 'optimizer': 'rmsprop', 'activation': 'elu'}
+08/19/2017 07:33:00 AM - INFO - Network accuracy: 9500.00%
+08/19/2017 07:33:00 AM - INFO - {'nb_layers': 2, 'nb_neurons': 256, 'optimizer': 'adam', 'activation': 'tanh'}
+08/19/2017 07:33:00 AM - INFO - Network accuracy: 9500.00%
+08/19/2017 07:33:34 AM - INFO - ***Evolving 10 generations with population 20***
+08/19/2017 07:33:34 AM - INFO - ***Doing generation 1 of 10***
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:34 AM - INFO - Start Train with given parms : {'nb_layers': 4, 'nb_neurons': 512, 'optimizer': 'adadelta', 'activation': 'elu'}
+08/19/2017 07:33:34 AM - INFO - Finish Train and It's result : 84
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:34 AM - INFO - Start Train with given parms : {'nb_layers': 3, 'nb_neurons': 768, 'optimizer': 'adamax', 'activation': 'tanh'}
+08/19/2017 07:33:34 AM - INFO - Finish Train and It's result : 37
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:34 AM - INFO - Start Train with given parms : {'nb_layers': 3, 'nb_neurons': 128, 'optimizer': 'adadelta', 'activation': 'relu'}
+08/19/2017 07:33:34 AM - INFO - Finish Train and It's result : 60
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:34 AM - INFO - Start Train with given parms : {'nb_layers': 1, 'nb_neurons': 64, 'optimizer': 'adagrad', 'activation': 'sigmoid'}
+08/19/2017 07:33:34 AM - INFO - Finish Train and It's result : 4
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:34 AM - INFO - Start Train with given parms : {'nb_layers': 2, 'nb_neurons': 512, 'optimizer': 'adadelta', 'activation': 'elu'}
+08/19/2017 07:33:34 AM - INFO - Finish Train and It's result : 27
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:34 AM - INFO - Start Train with given parms : {'nb_layers': 1, 'nb_neurons': 64, 'optimizer': 'adagrad', 'activation': 'relu'}
+08/19/2017 07:33:34 AM - INFO - Finish Train and It's result : 91
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:34 AM - INFO - Start Train with given parms : {'nb_layers': 4, 'nb_neurons': 512, 'optimizer': 'adam', 'activation': 'elu'}
+08/19/2017 07:33:34 AM - INFO - Finish Train and It's result : 57
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:34 AM - INFO - Start Train with given parms : {'nb_layers': 2, 'nb_neurons': 1024, 'optimizer': 'rmsprop', 'activation': 'sigmoid'}
+08/19/2017 07:33:34 AM - INFO - Finish Train and It's result : 4
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:34 AM - INFO - Start Train with given parms : {'nb_layers': 4, 'nb_neurons': 256, 'optimizer': 'adamax', 'activation': 'tanh'}
+08/19/2017 07:33:34 AM - INFO - Finish Train and It's result : 31
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:34 AM - INFO - Start Train with given parms : {'nb_layers': 4, 'nb_neurons': 768, 'optimizer': 'rmsprop', 'activation': 'elu'}
+08/19/2017 07:33:34 AM - INFO - Finish Train and It's result : 43
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:34 AM - INFO - Start Train with given parms : {'nb_layers': 3, 'nb_neurons': 256, 'optimizer': 'adam', 'activation': 'sigmoid'}
+08/19/2017 07:33:34 AM - INFO - Finish Train and It's result : 62
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:34 AM - INFO - Start Train with given parms : {'nb_layers': 1, 'nb_neurons': 512, 'optimizer': 'adam', 'activation': 'relu'}
+08/19/2017 07:33:34 AM - INFO - Finish Train and It's result : 97
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:34 AM - INFO - Start Train with given parms : {'nb_layers': 3, 'nb_neurons': 768, 'optimizer': 'adadelta', 'activation': 'tanh'}
+08/19/2017 07:33:34 AM - INFO - Finish Train and It's result : 10
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:34 AM - INFO - Start Train with given parms : {'nb_layers': 2, 'nb_neurons': 768, 'optimizer': 'adam', 'activation': 'sigmoid'}
+08/19/2017 07:33:34 AM - INFO - Finish Train and It's result : 45
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:34 AM - INFO - Start Train with given parms : {'nb_layers': 3, 'nb_neurons': 256, 'optimizer': 'adadelta', 'activation': 'elu'}
+08/19/2017 07:33:34 AM - INFO - Finish Train and It's result : 98
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:34 AM - INFO - Start Train with given parms : {'nb_layers': 3, 'nb_neurons': 768, 'optimizer': 'nadam', 'activation': 'sigmoid'}
+08/19/2017 07:33:34 AM - INFO - Finish Train and It's result : 33
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:34 AM - INFO - Start Train with given parms : {'nb_layers': 4, 'nb_neurons': 256, 'optimizer': 'adadelta', 'activation': 'elu'}
+08/19/2017 07:33:34 AM - INFO - Finish Train and It's result : 29
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:34 AM - INFO - Start Train with given parms : {'nb_layers': 1, 'nb_neurons': 64, 'optimizer': 'adagrad', 'activation': 'sigmoid'}
+08/19/2017 07:33:34 AM - INFO - Finish Train and It's result : 88
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:34 AM - INFO - Start Train with given parms : {'nb_layers': 2, 'nb_neurons': 64, 'optimizer': 'adamax', 'activation': 'elu'}
+08/19/2017 07:33:34 AM - INFO - Finish Train and It's result : 64
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : True
+08/19/2017 07:33:34 AM - INFO - Start Train with given parms : {'nb_layers': 1, 'nb_neurons': 1024, 'optimizer': 'adam', 'activation': 'tanh'}
+08/19/2017 07:33:34 AM - INFO - Finish Train and It's result : 96
+08/19/2017 07:33:34 AM - INFO - Generation average: 5300.00%
+08/19/2017 07:33:34 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:33:34 AM - INFO - ***Doing generation 2 of 10***
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Generation average: 6320.00%
+08/19/2017 07:33:34 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:33:34 AM - INFO - ***Doing generation 3 of 10***
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Generation average: 6175.00%
+08/19/2017 07:33:34 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:33:34 AM - INFO - ***Doing generation 4 of 10***
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Generation average: 5680.00%
+08/19/2017 07:33:34 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:33:34 AM - INFO - ***Doing generation 5 of 10***
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Generation average: 6955.00%
+08/19/2017 07:33:34 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:33:34 AM - INFO - ***Doing generation 6 of 10***
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Generation average: 7380.00%
+08/19/2017 07:33:34 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:33:34 AM - INFO - ***Doing generation 7 of 10***
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Generation average: 6830.00%
+08/19/2017 07:33:34 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:33:34 AM - INFO - ***Doing generation 8 of 10***
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Generation average: 7440.00%
+08/19/2017 07:33:34 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:33:34 AM - INFO - ***Doing generation 9 of 10***
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Generation average: 6530.00%
+08/19/2017 07:33:34 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:33:34 AM - INFO - ***Doing generation 10 of 10***
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Skip Real Train : False
+08/19/2017 07:33:34 AM - INFO - Generation average: 6080.00%
+08/19/2017 07:33:34 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:33:34 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:33:34 AM - INFO - {'nb_layers': 2, 'nb_neurons': 1024, 'optimizer': 'adamax', 'activation': 'elu'}
+08/19/2017 07:33:34 AM - INFO - Network accuracy: 9900.00%
+08/19/2017 07:33:34 AM - INFO - {'nb_layers': 3, 'nb_neurons': 256, 'optimizer': 'adadelta', 'activation': 'elu'}
+08/19/2017 07:33:34 AM - INFO - Network accuracy: 9800.00%
+08/19/2017 07:33:34 AM - INFO - {'nb_layers': 1, 'nb_neurons': 256, 'optimizer': 'adam', 'activation': 'relu'}
+08/19/2017 07:33:34 AM - INFO - Network accuracy: 9700.00%
+08/19/2017 07:33:34 AM - INFO - {'nb_layers': 1, 'nb_neurons': 1024, 'optimizer': 'adagrad', 'activation': 'elu'}
+08/19/2017 07:33:34 AM - INFO - Network accuracy: 9700.00%
+08/19/2017 07:33:34 AM - INFO - {'nb_layers': 2, 'nb_neurons': 1024, 'optimizer': 'adamax', 'activation': 'tanh'}
+08/19/2017 07:33:34 AM - INFO - Network accuracy: 9600.00%
+08/19/2017 07:34:29 AM - INFO - ***Evolving 10 generations with population 20***
+08/19/2017 07:34:29 AM - INFO - ***Doing generation 1 of 10***
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : True
+08/19/2017 07:34:29 AM - INFO - Start Train with given parms : {'nb_layers': 3, 'nb_neurons': 128, 'optimizer': 'nadam', 'activation': 'elu'}
+08/19/2017 07:34:29 AM - INFO - Finish Train and It's result : 70
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : True
+08/19/2017 07:34:29 AM - INFO - Start Train with given parms : {'nb_layers': 3, 'nb_neurons': 512, 'optimizer': 'adamax', 'activation': 'relu'}
+08/19/2017 07:34:29 AM - INFO - Finish Train and It's result : 47
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : True
+08/19/2017 07:34:29 AM - INFO - Start Train with given parms : {'nb_layers': 1, 'nb_neurons': 64, 'optimizer': 'adam', 'activation': 'tanh'}
+08/19/2017 07:34:29 AM - INFO - Finish Train and It's result : 21
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : True
+08/19/2017 07:34:29 AM - INFO - Start Train with given parms : {'nb_layers': 1, 'nb_neurons': 512, 'optimizer': 'adagrad', 'activation': 'tanh'}
+08/19/2017 07:34:29 AM - INFO - Finish Train and It's result : 58
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : True
+08/19/2017 07:34:29 AM - INFO - Start Train with given parms : {'nb_layers': 1, 'nb_neurons': 64, 'optimizer': 'sgd', 'activation': 'tanh'}
+08/19/2017 07:34:29 AM - INFO - Finish Train and It's result : 33
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : True
+08/19/2017 07:34:29 AM - INFO - Start Train with given parms : {'nb_layers': 2, 'nb_neurons': 64, 'optimizer': 'nadam', 'activation': 'sigmoid'}
+08/19/2017 07:34:29 AM - INFO - Finish Train and It's result : 54
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : True
+08/19/2017 07:34:29 AM - INFO - Start Train with given parms : {'nb_layers': 4, 'nb_neurons': 1024, 'optimizer': 'adagrad', 'activation': 'elu'}
+08/19/2017 07:34:29 AM - INFO - Finish Train and It's result : 13
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : True
+08/19/2017 07:34:29 AM - INFO - Start Train with given parms : {'nb_layers': 1, 'nb_neurons': 512, 'optimizer': 'sgd', 'activation': 'relu'}
+08/19/2017 07:34:29 AM - INFO - Finish Train and It's result : 52
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : True
+08/19/2017 07:34:29 AM - INFO - Start Train with given parms : {'nb_layers': 4, 'nb_neurons': 512, 'optimizer': 'adadelta', 'activation': 'elu'}
+08/19/2017 07:34:29 AM - INFO - Finish Train and It's result : 69
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : True
+08/19/2017 07:34:29 AM - INFO - Start Train with given parms : {'nb_layers': 3, 'nb_neurons': 768, 'optimizer': 'adamax', 'activation': 'tanh'}
+08/19/2017 07:34:29 AM - INFO - Finish Train and It's result : 72
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : True
+08/19/2017 07:34:29 AM - INFO - Start Train with given parms : {'nb_layers': 2, 'nb_neurons': 64, 'optimizer': 'adam', 'activation': 'relu'}
+08/19/2017 07:34:29 AM - INFO - Finish Train and It's result : 34
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : True
+08/19/2017 07:34:29 AM - INFO - Start Train with given parms : {'nb_layers': 4, 'nb_neurons': 256, 'optimizer': 'nadam', 'activation': 'relu'}
+08/19/2017 07:34:29 AM - INFO - Finish Train and It's result : 41
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : True
+08/19/2017 07:34:29 AM - INFO - Start Train with given parms : {'nb_layers': 1, 'nb_neurons': 128, 'optimizer': 'adadelta', 'activation': 'sigmoid'}
+08/19/2017 07:34:29 AM - INFO - Finish Train and It's result : 72
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : True
+08/19/2017 07:34:29 AM - INFO - Start Train with given parms : {'nb_layers': 1, 'nb_neurons': 256, 'optimizer': 'adadelta', 'activation': 'elu'}
+08/19/2017 07:34:29 AM - INFO - Finish Train and It's result : 48
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : True
+08/19/2017 07:34:29 AM - INFO - Start Train with given parms : {'nb_layers': 3, 'nb_neurons': 256, 'optimizer': 'adam', 'activation': 'tanh'}
+08/19/2017 07:34:29 AM - INFO - Finish Train and It's result : 21
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : True
+08/19/2017 07:34:29 AM - INFO - Start Train with given parms : {'nb_layers': 3, 'nb_neurons': 256, 'optimizer': 'adam', 'activation': 'sigmoid'}
+08/19/2017 07:34:29 AM - INFO - Finish Train and It's result : 18
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : True
+08/19/2017 07:34:29 AM - INFO - Start Train with given parms : {'nb_layers': 2, 'nb_neurons': 64, 'optimizer': 'sgd', 'activation': 'elu'}
+08/19/2017 07:34:29 AM - INFO - Finish Train and It's result : 36
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : True
+08/19/2017 07:34:29 AM - INFO - Start Train with given parms : {'nb_layers': 3, 'nb_neurons': 768, 'optimizer': 'nadam', 'activation': 'sigmoid'}
+08/19/2017 07:34:29 AM - INFO - Finish Train and It's result : 79
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : True
+08/19/2017 07:34:29 AM - INFO - Start Train with given parms : {'nb_layers': 2, 'nb_neurons': 1024, 'optimizer': 'adagrad', 'activation': 'tanh'}
+08/19/2017 07:34:29 AM - INFO - Finish Train and It's result : 32
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : True
+08/19/2017 07:34:29 AM - INFO - Start Train with given parms : {'nb_layers': 1, 'nb_neurons': 64, 'optimizer': 'adamax', 'activation': 'tanh'}
+08/19/2017 07:34:29 AM - INFO - Finish Train and It's result : 76
+08/19/2017 07:34:29 AM - INFO - Generation average: 4730.00%
+08/19/2017 07:34:29 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:34:29 AM - INFO - ***Doing generation 2 of 10***
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Generation average: 5355.00%
+08/19/2017 07:34:29 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:34:29 AM - INFO - ***Doing generation 3 of 10***
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Generation average: 5440.00%
+08/19/2017 07:34:29 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:34:29 AM - INFO - ***Doing generation 4 of 10***
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Generation average: 5870.00%
+08/19/2017 07:34:29 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:34:29 AM - INFO - ***Doing generation 5 of 10***
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Generation average: 6360.00%
+08/19/2017 07:34:29 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:34:29 AM - INFO - ***Doing generation 6 of 10***
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Generation average: 5770.00%
+08/19/2017 07:34:29 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:34:29 AM - INFO - ***Doing generation 7 of 10***
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Generation average: 6245.00%
+08/19/2017 07:34:29 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:34:29 AM - INFO - ***Doing generation 8 of 10***
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Generation average: 7390.00%
+08/19/2017 07:34:29 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:34:29 AM - INFO - ***Doing generation 9 of 10***
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Generation average: 6525.00%
+08/19/2017 07:34:29 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:34:29 AM - INFO - ***Doing generation 10 of 10***
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Skip Real Train : False
+08/19/2017 07:34:29 AM - INFO - Generation average: 7270.00%
+08/19/2017 07:34:29 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:34:29 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:34:29 AM - INFO - {'nb_layers': 3, 'nb_neurons': 768, 'optimizer': 'nadam', 'activation': 'sigmoid'}
+08/19/2017 07:34:29 AM - INFO - Network accuracy: 9800.00%
+08/19/2017 07:34:29 AM - INFO - {'nb_layers': 1, 'nb_neurons': 64, 'optimizer': 'adadelta', 'activation': 'tanh'}
+08/19/2017 07:34:29 AM - INFO - Network accuracy: 9400.00%
+08/19/2017 07:34:29 AM - INFO - {'nb_layers': 1, 'nb_neurons': 64, 'optimizer': 'nadam', 'activation': 'tanh'}
+08/19/2017 07:34:29 AM - INFO - Network accuracy: 9300.00%
+08/19/2017 07:34:29 AM - INFO - {'nb_layers': 3, 'nb_neurons': 768, 'optimizer': 'adadelta', 'activation': 'tanh'}
+08/19/2017 07:34:29 AM - INFO - Network accuracy: 9200.00%
+08/19/2017 07:34:29 AM - INFO - {'nb_layers': 1, 'nb_neurons': 768, 'optimizer': 'adadelta', 'activation': 'tanh'}
+08/19/2017 07:34:29 AM - INFO - Network accuracy: 9200.00%
+08/19/2017 07:35:10 AM - INFO - ***Evolving 10 generations with population 20***
+08/19/2017 07:35:10 AM - INFO - ***Doing generation 1 of 10***
+08/19/2017 07:35:10 AM - INFO - Generation average: 5195.00%
+08/19/2017 07:35:10 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:35:10 AM - INFO - ***Doing generation 2 of 10***
+08/19/2017 07:35:10 AM - INFO - Generation average: 4885.00%
+08/19/2017 07:35:10 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:35:10 AM - INFO - ***Doing generation 3 of 10***
+08/19/2017 07:35:10 AM - INFO - Generation average: 6820.00%
+08/19/2017 07:35:10 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:35:10 AM - INFO - ***Doing generation 4 of 10***
+08/19/2017 07:35:10 AM - INFO - Generation average: 6365.00%
+08/19/2017 07:35:10 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:35:10 AM - INFO - ***Doing generation 5 of 10***
+08/19/2017 07:35:10 AM - INFO - Generation average: 6180.00%
+08/19/2017 07:35:10 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:35:10 AM - INFO - ***Doing generation 6 of 10***
+08/19/2017 07:35:10 AM - INFO - Generation average: 6810.00%
+08/19/2017 07:35:10 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:35:10 AM - INFO - ***Doing generation 7 of 10***
+08/19/2017 07:35:10 AM - INFO - Generation average: 7295.00%
+08/19/2017 07:35:10 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:35:10 AM - INFO - ***Doing generation 8 of 10***
+08/19/2017 07:35:10 AM - INFO - Generation average: 7165.00%
+08/19/2017 07:35:10 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:35:10 AM - INFO - ***Doing generation 9 of 10***
+08/19/2017 07:35:10 AM - INFO - Generation average: 6670.00%
+08/19/2017 07:35:10 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:35:10 AM - INFO - ***Doing generation 10 of 10***
+08/19/2017 07:35:10 AM - INFO - Generation average: 6520.00%
+08/19/2017 07:35:10 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:35:10 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:40:30 AM - INFO - ***Evolving 10 generations with population 20***
+08/19/2017 07:40:42 AM - INFO - ***Evolving 10 generations with population 20***
+08/19/2017 07:40:59 AM - INFO - ***Evolving 10 generations with population 20***
+08/19/2017 07:40:59 AM - INFO - ***Doing generation 1 of 10***
+08/19/2017 07:40:59 AM - INFO - Generation average: 49.10%
+08/19/2017 07:40:59 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:40:59 AM - INFO - ***Doing generation 2 of 10***
+08/19/2017 07:40:59 AM - INFO - Generation average: 61.95%
+08/19/2017 07:40:59 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:40:59 AM - INFO - ***Doing generation 3 of 10***
+08/19/2017 07:40:59 AM - INFO - Generation average: 59.75%
+08/19/2017 07:40:59 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:40:59 AM - INFO - ***Doing generation 4 of 10***
+08/19/2017 07:40:59 AM - INFO - Generation average: 66.30%
+08/19/2017 07:40:59 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:40:59 AM - INFO - ***Doing generation 5 of 10***
+08/19/2017 07:40:59 AM - INFO - Generation average: 60.00%
+08/19/2017 07:40:59 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:40:59 AM - INFO - ***Doing generation 6 of 10***
+08/19/2017 07:40:59 AM - INFO - Generation average: 70.75%
+08/19/2017 07:40:59 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:40:59 AM - INFO - ***Doing generation 7 of 10***
+08/19/2017 07:40:59 AM - INFO - Generation average: 68.00%
+08/19/2017 07:40:59 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:40:59 AM - INFO - ***Doing generation 8 of 10***
+08/19/2017 07:40:59 AM - INFO - Generation average: 67.75%
+08/19/2017 07:40:59 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:40:59 AM - INFO - ***Doing generation 9 of 10***
+08/19/2017 07:40:59 AM - INFO - Generation average: 74.90%
+08/19/2017 07:40:59 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:40:59 AM - INFO - ***Doing generation 10 of 10***
+08/19/2017 07:40:59 AM - INFO - Generation average: 60.40%
+08/19/2017 07:40:59 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:40:59 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:42:43 AM - INFO - ***Evolving 10 generations with population 20***
+08/19/2017 07:42:43 AM - INFO - ***Doing generation 1 of 10***
+08/19/2017 07:42:43 AM - INFO - Generation average: 43.60%
+08/19/2017 07:42:43 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:42:43 AM - INFO - ***Doing generation 2 of 10***
+08/19/2017 07:42:43 AM - INFO - Generation average: 50.70%
+08/19/2017 07:42:43 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:42:43 AM - INFO - ***Doing generation 3 of 10***
+08/19/2017 07:42:43 AM - INFO - Generation average: 65.30%
+08/19/2017 07:42:43 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:42:43 AM - INFO - ***Doing generation 4 of 10***
+08/19/2017 07:42:43 AM - INFO - Generation average: 60.60%
+08/19/2017 07:42:43 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:42:43 AM - INFO - ***Doing generation 5 of 10***
+08/19/2017 07:42:43 AM - INFO - Generation average: 73.30%
+08/19/2017 07:42:43 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:42:43 AM - INFO - ***Doing generation 6 of 10***
+08/19/2017 07:42:43 AM - INFO - Generation average: 60.55%
+08/19/2017 07:42:43 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:42:43 AM - INFO - ***Doing generation 7 of 10***
+08/19/2017 07:42:43 AM - INFO - Generation average: 65.65%
+08/19/2017 07:42:43 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:42:43 AM - INFO - ***Doing generation 8 of 10***
+08/19/2017 07:42:43 AM - INFO - Generation average: 69.20%
+08/19/2017 07:42:43 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:42:43 AM - INFO - ***Doing generation 9 of 10***
+08/19/2017 07:42:43 AM - INFO - Generation average: 67.10%
+08/19/2017 07:42:43 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:42:43 AM - INFO - ***Doing generation 10 of 10***
+08/19/2017 07:42:43 AM - INFO - Generation average: 64.80%
+08/19/2017 07:42:43 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:42:43 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:44:30 AM - INFO - ***Evolving 10 generations with population 20***
+08/19/2017 07:44:30 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:47:47 AM - INFO - ***Evolving 10 generations with population 20***
+08/19/2017 07:47:47 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:50:25 AM - INFO - ***Evolving 10 generations with population 20***
+08/19/2017 07:50:39 AM - INFO - ***Evolving 10 generations with population 20***
+08/19/2017 07:50:39 AM - INFO - --------------------------------------------------------------------------------
+08/19/2017 07:53:17 AM - INFO - ***Evolving 10 generations with population 20***
+08/19/2017 07:53:17 AM - INFO - --------------------------------------------------------------------------------

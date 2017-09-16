@@ -1,0 +1,34 @@
+class config():
+
+    embedding = "facebook" #fasttext, word2vec, facebook
+    embedding_model_path = "./data/w2v"
+    crawler_path = "./data/crawler/"
+    crawler_file = 'source.txt'
+    pos_path = "./data/crawler/pos.txt"
+    trimmed_filename = "./data/processed/kor/w2v.trimmed.npz"
+    charembed_filename = "./data/processed/kor/char.trimmed.npz"
+    words_filename = "./data/processed/kor/words.txt"
+    tags_filename = "./data/processed/kor/tags.txt"
+    chars_filename = "./data/processed/kor/chars.txt"
+    dev_filename = "./data/coNLL/kor/kor.testa.iob"
+    test_filename = "./data/coNLL/kor/kor.testb.iob"
+    train_filename = "./data/coNLL/kor/kor.train.iob"
+    dim = 300
+    dim_char = 120
+    max_iter = None
+    lowercase = True
+    train_embeddings = False
+    nepochs = 100
+    dropout = 0.5
+    batch_size = 10
+    lr = 0.03
+    lr_decay = 0.9
+    nepoch_no_imprv = 300
+    use_crawler = False
+    hidden_size = 300
+    char_hidden_size = 100
+    crf = True # size one is not allowed
+    chars = True # if char embedding, training is 3.5x slower
+    output_path = "results/crf4/"
+    model_output = output_path + "model.weights/"
+    log_path = output_path + "log.txt"

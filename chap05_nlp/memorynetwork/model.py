@@ -206,11 +206,15 @@ class MemN2N(object):
             time = np.ndarray([self.batch_size, self.mem_size], dtype=np.int32)
             context = np.ndarray([self.batch_size, self.mem_size])
 
-            if (len(input_question) >  self.edim) :
-                x[0] = np.array(input_question[0:self.edim])
-            else :
-                x[0] = np.array(input_question[0:self.edim] + ([self.init_hid] * (self.edim - len(input_question))))
-
+            # Think it is necessary to define embedding matrix for questions too... 
+            # but.. since the original code do not consider quesion embedding 
+            # here we just use Embedding A's vector for question embedding 
+            # and.. since we have to make the matrix size fit to self.edim
+            # we had to add all words embeded vector into one
+            embed_a = self.sess.run(self.A)
+            for word in input_question : 
+                x[0] = x[0] + embed_a[word]
+            
             for t in range(self.mem_size):
                 time[:,t].fill(t)
 
@@ -223,6 +227,7 @@ class MemN2N(object):
                                                              self.context: context}))
             return result
         except Exception as e :
+            print(e)
             raise Exception (e)
 
     def run(self, train_data, test_data):
