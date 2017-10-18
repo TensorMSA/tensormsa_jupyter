@@ -1,3 +1,6 @@
 chap01_tensorflow_basic/.ipynb_checkpoints/
 chap01_tensorflow_basic/my-model*
 .ipynb_checkpoints*
+chap05_nlp/attention_seq2seq/tf1.2/data/*
+.idea/*
+*.pyc
