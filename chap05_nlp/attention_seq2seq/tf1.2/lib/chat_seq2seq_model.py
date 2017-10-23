@@ -74,11 +74,6 @@ class ChatSeq2SeqModel(object):
 			tf.reduce_max(self.decoder_inputs_length)
 		], dtype=tf.float32, name="loss_weights")
 
-		# temp_encoder_inputs = self.encoder_inputs[:self.buckets[-1][0], :]
-		# self.encoder_inputs2 = temp_encoder_inputs
-		# temp_decoder_inputs = self.decoder_inputs[:self.buckets[-1][1], :]
-		# self.decoder_inputs2 = temp_decoder_inputs
-
 		self.target_weights = tf.placeholder(shape=(None, None), dtype=tf.float32, name="target_weights")
 
 	def _init_embeddings(self):
@@ -111,56 +106,46 @@ class ChatSeq2SeqModel(object):
 	def _init_decoder(self, forward_only):
 		try :
 			with tf.variable_scope("decoder") as scope:
-				def output_fn(outputs):
-					return tf.contrib.layers.linear(outputs, self.target_vocab_size, scope=scope)
-
-				# attention_states: size [batch_size, max_time, num_units]
-				#attention_states = tf.transpose(self.encoder_outputs, [1, 0, 2])
 				self.batch_size = tf.shape(self.encoder_inputs)[0]
-
 				self.attn_mech = tf.contrib.seq2seq.LuongAttention(
 					num_units=self.dec_hidden_size,
 					memory=self.encoder_outputs,
 					memory_sequence_length=self.encoder_inputs_length,
-					# normalize=False,
 					name='LuongAttention')
 
 				self.dec_cell = tf.contrib.seq2seq.AttentionWrapper(
 					cell=self.decoder_cell,
 					attention_mechanism=self.attn_mech,
 					attention_layer_size=self.dec_hidden_size,
-					# attention_history=False (in ver 1.2)
 					name='Attention_Wrapper')
 
 				self.out_cell = tf.contrib.rnn.OutputProjectionWrapper(
 					self.dec_cell, self.target_vocab_size, reuse=False
 				)
 
-				self.output_layer = Dense(self.target_vocab_size + 2, name='output_projection')
-
-
 				if forward_only:
 					# maxium unrollings in current batch = max(dec_sent_len) + 1(GO symbol)
 					self.max_dec_len = tf.reduce_max(self.decoder_inputs_length + 1, name='max_dec_len')
 
-					self.training_helper = tf.contrib.seq2seq.TrainingHelper(
-						inputs=self.decoder_inputs_embedded,
-						sequence_length=self.decoder_inputs_length + 1,
-						time_major=False,
-						name='training_helper')
+					start_tokens = tf.tile(tf.constant([model_config.PAD_ID], dtype=tf.int32), [self.batch_size],
+										   name='start_tokens')
+
+					self.training_helper = tf.contrib.seq2seq.GreedyEmbeddingHelper(
+						self.dec_embedding_matrix,
+						start_tokens=start_tokens,
+						end_token=model_config.EOS_ID)
 
 					self.training_decoder = tf.contrib.seq2seq.BasicDecoder(
 						cell=self.out_cell,
 						helper=self.training_helper,
 						initial_state=self.out_cell.zero_state(
-							dtype=tf.float32, batch_size=self.batch_size),
-						output_layer=self.output_layer)
+							dtype=tf.float32, batch_size=self.batch_size))
 
 					infer_dec_outputs, infer_dec_last_state, _ = tf.contrib.seq2seq.dynamic_decode(
 						self.training_decoder,
 						output_time_major=False,
 						impute_finished=True,
-						maximum_iterations=self.max_dec_len)
+						maximum_iterations=self.target_vocab_size)
 
 					# [batch_size x dec_sentence_length], tf.int32
 					self.predictions = tf.identity(infer_dec_outputs.sample_id, name='predictions')
@@ -178,8 +163,7 @@ class ChatSeq2SeqModel(object):
 						cell=self.out_cell,
 						helper=self.training_helper,
 						initial_state=self.out_cell.zero_state(
-									dtype=tf.float32, batch_size=self.batch_size),
-						output_layer=self.output_layer)
+									dtype=tf.float32, batch_size=self.batch_size))
 
 					self.decoder_outputs, self.decoder_state, _ = tf.contrib.seq2seq.dynamic_decode(
 						self.training_decoder,
