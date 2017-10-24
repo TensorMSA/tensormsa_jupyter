@@ -8,8 +8,7 @@ from configs import model_config
 
 
 class ChatSeq2SeqModel(object):
-	def __init__(self, config, use_lstm=True, forward_only=False, bidirectional=True, attention=False):
-		self.bidirectional = bidirectional
+	def __init__(self, config, use_lstm=True, forward_only=False, attention=False):
 		self.attention = attention
 
 		self.input_vocab_size = config.input_vocab_size
@@ -35,6 +34,7 @@ class ChatSeq2SeqModel(object):
 		else:
 			single_cell1 = GRUCell(self.enc_hidden_size)
 			single_cell2 = GRUCell(self.dec_hidden_size)
+
 		enc_cell = MultiRNNCell([single_cell1 for _ in range(self.enc_num_layers)])
 		dec_cell = MultiRNNCell([single_cell2 for _ in range(self.dec_num_layers)])
 
@@ -47,12 +47,7 @@ class ChatSeq2SeqModel(object):
 	def _make_graph(self, forward_only):
 		self._init_data()
 		self._init_embeddings()
-
-		if self.bidirectional:
-			self._init_bidirectional_encoder()
-		else:
-			self._init_simple_encoder()
-
+		self._init_simple_encoder()
 		self._init_decoder(forward_only)
 
 		if not forward_only:
@@ -68,13 +63,6 @@ class ChatSeq2SeqModel(object):
 
 		# Our targets are decoder inputs shifted by one.
 		self.decoder_targets = self.decoder_inputs[1:, :]
-
-		self.target_weights = tf.ones([
-			self.batch_size,
-			tf.reduce_max(self.decoder_inputs_length)
-		], dtype=tf.float32, name="loss_weights")
-
-		self.target_weights = tf.placeholder(shape=(None, None), dtype=tf.float32, name="target_weights")
 
 	def _init_embeddings(self):
 		with tf.variable_scope("embedding") as scope:
@@ -104,8 +92,9 @@ class ChatSeq2SeqModel(object):
 																		   time_major=False, dtype=tf.float32)
 
 	def _init_decoder(self, forward_only):
+
 		try :
-			with tf.variable_scope("decoder") as scope:
+			with tf.variable_scope("decoder"):
 				self.batch_size = tf.shape(self.encoder_inputs)[0]
 				self.attn_mech = tf.contrib.seq2seq.LuongAttention(
 					num_units=self.dec_hidden_size,
@@ -127,31 +116,35 @@ class ChatSeq2SeqModel(object):
 					# maxium unrollings in current batch = max(dec_sent_len) + 1(GO symbol)
 					self.max_dec_len = tf.reduce_max(self.decoder_inputs_length + 1, name='max_dec_len')
 
-					start_tokens = tf.tile(tf.constant([model_config.PAD_ID], dtype=tf.int32), [self.batch_size],
+					start_tokens = tf.tile(tf.constant([model_config.GO_ID], dtype=tf.int32), [self.batch_size],
 										   name='start_tokens')
 
-					self.training_helper = tf.contrib.seq2seq.GreedyEmbeddingHelper(
+					self.predict_helper = tf.contrib.seq2seq.GreedyEmbeddingHelper(
 						self.dec_embedding_matrix,
 						start_tokens=start_tokens,
 						end_token=model_config.EOS_ID)
 
-					self.training_decoder = tf.contrib.seq2seq.BasicDecoder(
+					self.predict_decoder = tf.contrib.seq2seq.BasicDecoder(
 						cell=self.out_cell,
-						helper=self.training_helper,
+						helper=self.predict_helper,
 						initial_state=self.out_cell.zero_state(
 							dtype=tf.float32, batch_size=self.batch_size))
 
 					infer_dec_outputs, infer_dec_last_state, _ = tf.contrib.seq2seq.dynamic_decode(
-						self.training_decoder,
+						self.predict_decoder,
 						output_time_major=False,
 						impute_finished=True,
-						maximum_iterations=self.target_vocab_size)
+						maximum_iterations=self.max_dec_len)
 
 					# [batch_size x dec_sentence_length], tf.int32
 					self.predictions = tf.identity(infer_dec_outputs.sample_id, name='predictions')
 				else:
 					# maxium unrollings in current batch = max(dec_sent_len) + 1(GO symbol)
 					self.max_dec_len = tf.reduce_max(self.decoder_inputs_length + 1, name='max_dec_len')
+
+					self.out_cell = tf.contrib.rnn.OutputProjectionWrapper(
+						self.dec_cell, self.target_vocab_size, reuse=False
+					)
 
 					self.training_helper = tf.contrib.seq2seq.TrainingHelper(
 						inputs=self.decoder_inputs_embedded,
@@ -206,8 +199,7 @@ class ChatSeq2SeqModel(object):
 				self.encoder_inputs: encoder_inputs,
 				self.encoder_inputs_length: encoder_inputs_length,
 				self.decoder_inputs: decoder_inputs,
-				self.decoder_inputs_length: decoder_inputs_length,
-				self.target_weights: target_weights
+				self.decoder_inputs_length: decoder_inputs_length
 			}
 
 			if forward_only:

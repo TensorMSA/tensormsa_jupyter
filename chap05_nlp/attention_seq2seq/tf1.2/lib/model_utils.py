@@ -1,7 +1,6 @@
 import tensorflow as tf
 
 from tensorflow.python.platform import gfile
-from configs import model_config
 from lib import chat_seq2seq_model
 
 
@@ -10,7 +9,6 @@ def create_model(session, config, forward_only):
 		config=config,
 		use_lstm=True,
 		forward_only=forward_only,
-		bidirectional=False,
 		attention=True
 	)
 

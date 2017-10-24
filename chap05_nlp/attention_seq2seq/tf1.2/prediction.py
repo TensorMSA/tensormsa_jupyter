@@ -22,7 +22,6 @@ def main(_):
 		config.batch_size = 1
 		model = model_utils.create_model(sess, config, forward_only)
 
-
 		valid_data_path = os.path.join(config.data_dir, 'chat_valid_ids%d.in'% config.input_vocab_size)
 		dev_set = data_utils.read_test_data_chat(valid_data_path, config)[:2]
 		bucket_id = 0
