@@ -1,6 +1,5 @@
 cd ~/notebooks
 
-git clone https://github.com/TensorMSA/tensormsa_jupyter.git
 
 git clone --recursive https://github.com/dmlc/xgboost
 cd xgboost; make -j4
